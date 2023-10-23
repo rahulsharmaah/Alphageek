@@ -9,16 +9,16 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import Layout from "./components/Layout";
-import { Dashboard } from "@mui/icons-material";
 import Setting from "./pages/Setting";
 import Support from "./pages/Support";
 import ChannelEngagement from "./pages/Channel Engagement";
 import Gamification from "./pages/Gaminfication";
+import Dashboard from "./pages/Dashboard";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout/>}>
-      <Route path='/dashboard' element={<Dashboard />} />
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Dashboard />} />
       <Route path="/channel-engagement" element={<ChannelEngagement />} />
       <Route path="/gamification" element={<Gamification />} />
       <Route path="/setting" element={<Setting />} />

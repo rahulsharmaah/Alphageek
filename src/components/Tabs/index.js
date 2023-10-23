@@ -20,7 +20,7 @@ const StyledTabs = styled(Tabs)`
   }
 
   .css-1aquho2-MuiTabs-indicator {
-    top: 0;
+    top: 0 !important;
     border-radius: 40px !important;
   }
   .MuiTab-textColorInherit.Mui-selected {

@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import {
+  Hidden,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 // import { Link, useLocation } from "react-router-dom"; // Import useLocation
 import { NavLink } from "react-router-dom";
 import ChartFill from "../icons/ChartFIll";
@@ -15,18 +21,20 @@ const SidebarList = styled(List)`
   position: relative !important;
   z-index: 9999 !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  width: 100%;
-  max-width: ${(props) => (props.isTextVisible ? "18vw" : "4vw")};
+  max-width: ${(props) => (props.isTextVisible ? "40vw" : "4vw")};
   height: 100vh;
   opacity: 5;
   /* Style the active SVG image */
   .active svg {
-    fill: ${(props) => (props.activeClassName ?"grey":"red")}/* Change the fill color of the SVG image to red for active items */
+    fill: ${(props) =>
+      props.activeClassName
+        ? "grey"
+        : "red"}; /* Change the fill color of the SVG image to red for active items */
   }
 
   /* Style the inactive SVG image */
   svg {
-    fill: ${(props) => (props.activeClassName ?"grey":"red")};
+    fill: ${(props) => (props.activeClassName ? "grey" : "red")};
   }
 `;
 
@@ -49,13 +57,21 @@ const Sidebar = () => {
   const [isTextVisible, setIsTextVisible] = useState(false);
 
   const handleClick = () => setIsTextVisible(!isTextVisible);
+  // const [isDrawerOpen, setDrawerOpen] = useState(false);
 
+  // const handleDrawerOpen = () => {
+  //   setDrawerOpen(true);
+  // };
+
+  // const handleDrawerClose = () => {
+  //   setDrawerOpen(false);
+  // };
   const items = [
     {
       id: 1,
       text: "Dashboard",
       image: <ChartFill />,
-      link: "/dashboard",
+      link: "/",
     },
     {
       id: 3,
@@ -84,30 +100,34 @@ const Sidebar = () => {
   ];
 
   return (
-    <SidebarList isTextVisible={isTextVisible}>
-      <TopToggle>
-        <ToggleButton onClick={handleClick}>&#9776;</ToggleButton>
-      </TopToggle>
-      {items.map((item) => (
-        <ListItem key={item.id} onClick={handleClick}>
-          <NavLink
-            to={item.link}
-            className={({ isActive }) => (isActive ? activeClassName : "")}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <ListItemIcon className={activeClassName}>
-              {item.image}
-            </ListItemIcon>
-            <ListItemText
-              primary={item.text}
-              primaryTypographyProps={{
-                display: isTextVisible ? "inline-block" : "none",
-              }}
-            />
-          </NavLink>
-        </ListItem>
-      ))}
-    </SidebarList>
+    <Hidden smDown>
+      <SidebarList isTextVisible={isTextVisible}>
+        <TopToggle>
+          <ToggleButton onClick={handleClick}>
+            &#9776;
+          </ToggleButton>
+        </TopToggle>
+        {items.map((item) => (
+          <ListItem key={item.id} onClick={handleClick}>
+            <NavLink
+              to={item.link}
+              className={({ isActive }) => (isActive ? activeClassName : "")}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <ListItemIcon className={activeClassName}>
+                {item.image}
+              </ListItemIcon>
+              <ListItemText
+                primary={item.text}
+                primaryTypographyProps={{
+                  display: isTextVisible ? "inline-block" : "none",
+                }}
+              />
+            </NavLink>
+          </ListItem>
+        ))}
+      </SidebarList>
+    </Hidden>
   );
 };
 
