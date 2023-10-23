@@ -1,13 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import Layout from "./components/Layout";
+import { Dashboard } from "@mui/icons-material";
+import Setting from "./pages/Setting";
+import Support from "./pages/Support";
+import ChannelEngagement from "./pages/Channel Engagement";
+import Gamification from "./pages/Gaminfication";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout/>}>
+      <Route path='/dashboard' element={<Dashboard />} />
+      <Route path="/channel-engagement" element={<ChannelEngagement />} />
+      <Route path="/gamification" element={<Gamification />} />
+      <Route path="/setting" element={<Setting />} />
+      <Route path="/support" element={<Support />} />
+    </Route>
+  )
+);
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
