@@ -29,7 +29,7 @@ function Layout() {
     <LayoutContainer>
       {isMobile ? <StickyNavbar /> : <Header />}
       <MainContent>
-        <Hidden mdDown>
+        <Hidden Down>
           <aside>
             <SidebarContent>
               <Sidebar />

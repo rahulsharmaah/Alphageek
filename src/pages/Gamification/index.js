@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Grid } from "@mui/material";
 import Separator from "../../components/Separator";
 import CreateTabs from "../../components/Tabs";
+import VideoSection from "../../components/GamificationContent/VideoSection";
 
 const Gamification = () => {
   const tabLabelsData = ["Active", "Performance", "Video"];
@@ -19,7 +20,7 @@ const Gamification = () => {
           <Separator />
         </Grid>
         <Grid item xs={12} md={12}>
-          {/* {activeTab === 0 ? <EngagementCardsSection /> : <Insights />} */}
+          {activeTab === 2 && <VideoSection />}
         </Grid>
       </Grid>
     </>
