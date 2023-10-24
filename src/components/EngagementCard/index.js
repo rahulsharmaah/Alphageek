@@ -125,6 +125,11 @@ const EngagementCard = ({
                     key={index}
                     isLast={index === progressBars.length - 1}
                     value={progress.percentage}
+                    backgroundColor={
+                      index === progressBars.length - 1
+                        ? "var(--Orange, #E58828)"
+                        : "linear-gradient(90deg, #27b1fe 0.46%, #1dc560 118.27%)"
+                    }
                   />
                 </Grid2>
                 <Grid2 item md={1} xs={2}>
