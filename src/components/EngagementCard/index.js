@@ -125,9 +125,6 @@ const EngagementCard = ({
                     key={index}
                     isLast={index === progressBars.length - 1}
                     value={progress.percentage}
-                    sx={{
-                      bgcolor: "	#D3D3D3",
-                    }}
                   />
                 </Grid2>
                 <Grid2 item md={1} xs={2}>
