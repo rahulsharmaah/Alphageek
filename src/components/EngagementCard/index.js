@@ -12,7 +12,6 @@ import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import StyledButton from "../Button";
 const EngagementCard = ({
   title,
-  partner,
   logo,
   image,
   tagline,
@@ -38,7 +37,7 @@ const EngagementCard = ({
           </Grid2>
           <Grid2 item md={6}>
             <Typography variant="body" color="textSecondary">
-              in partnership with {partner}{" "}
+              in partnership with{" "}
             </Typography>
           </Grid2>
           <Grid2 item md={3}>
@@ -200,7 +199,7 @@ const ProgressBar = styled(LinearProgress)`
   .css-5xe99f-MuiLinearProgress-bar1 {
     background: ${(props) =>
       props.isLast
-        ? "var(--Orange, #E58828)"
+        ? "var(--Orange, #E58828) !important"
         : "linear-gradient(90deg, #27b1fe 0.46%, #1dc560 118.27%)"} !important;
   }
   /* transform: scaleX(-1); */

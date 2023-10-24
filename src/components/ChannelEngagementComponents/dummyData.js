@@ -1,7 +1,6 @@
 const dummyData = [
   {
     title: "Mobile",
-    partner: "Microsoft",
     logo: "microsoft.png",
     image: "image11.svg",
     tagline: "EasyCredit 2023 League Preview ",
