@@ -3,7 +3,6 @@ import { Line } from "react-chartjs-2";
 
 const options = {
   responsive: true,
-  maintainAspectRatio: false,
   scales: {
     x: {
       beginAtZero: true,

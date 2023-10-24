@@ -109,7 +109,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <Hidden smDown>
+      <Hidden mdDown>
         <SidebarList isTextVisible={isTextVisible}>
           <TopToggle>
             <ToggleButton onClick={handleClick}>&#9776;</ToggleButton>
@@ -135,7 +135,7 @@ const Sidebar = () => {
           ))}
         </SidebarList>
       </Hidden>
-      <Hidden smUp>
+      <Hidden mdUp>
         <HamburgerMenu />
       </Hidden>
     </>

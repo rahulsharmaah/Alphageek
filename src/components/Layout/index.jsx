@@ -24,12 +24,12 @@ const SidebarContent = styled.div`
 
 function Layout() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <LayoutContainer>
       {isMobile ? <StickyNavbar /> : <Header />}
       <MainContent>
-        <Hidden smDown>
+        <Hidden mdDown>
           <aside>
             <SidebarContent>
               <Sidebar />

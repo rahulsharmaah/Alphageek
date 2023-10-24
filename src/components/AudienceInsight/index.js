@@ -41,19 +41,19 @@ const AudienceInsight = () => {
           <DotsButton>...</DotsButton>
         </Container>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={2.4}>
+          <Grid item xs={12} md={2.4} sm={6}>
             <TableComponent heading="Table 1" data={tableData1} />
           </Grid>
-          <Grid item xs={12} sm={2.4}>
+          <Grid item xs={12} md={2.4} sm={6}>
             <TableComponent heading="Table 2" data={tableData2} />
           </Grid>
-          <Grid item xs={12} sm={2.4}>
+          <Grid item xs={12} md={2.4} sm={6}>
             <TableComponent heading="Table 3" data={tableData3} />
           </Grid>
-          <Grid item xs={12} sm={2.4}>
+          <Grid item xs={12} md={2.4} sm={6}>
             <TableComponent heading="Table 4" data={tableData4} />
           </Grid>
-          <Grid item xs={12} sm={2.4}>
+          <Grid item xs={12} md={2.4} sm={6}>
             <TableComponent heading="Table 5" data={tableData5} />
           </Grid>
         </Grid>
