@@ -7,6 +7,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled as muiStyled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import { NotificationIcon } from "../icons/NotificationIcon";
+import { Hidden } from "@mui/material";
 const Header = () => {
   return (
     <Box
@@ -42,26 +43,30 @@ const Header = () => {
               />
             </Search>
           </SearchGridItem>
-          <NotificationGridItem xs={2}>
-            <NotificationIconWrapper>
-              <NotificationIcon />
-            </NotificationIconWrapper>
-          </NotificationGridItem>
+          <Hidden smDown>
+            <NotificationGridItem xs={2}>
+              <NotificationIconWrapper>
+                <NotificationIcon />
+              </NotificationIconWrapper>
+            </NotificationGridItem>
+          </Hidden>
         </Grid>
-        <Grid
-          xs={6}
-          md={3}
-          container
-          alignItems={"center"}
-          justifyContent={"center"}
-        >
-          <Grid item md={6}>
-            <img src={"/xbox.jpg"} alt="xbox.jpg" />
+        <Hidden smDown>
+          <Grid
+            xs={6}
+            md={3}
+            container
+            alignItems={"flex-end !Important"}
+            justifyContent={"center"}
+          >
+            <Grid item md={6}>
+              <img src={"/xbox.jpg"} alt="xbox.jpg" />
+            </Grid>
+            <Grid item md={6} justifyContent={"center"}>
+              <Heading>C. Munson</Heading>
+            </Grid>
           </Grid>
-          <Grid item md={6} justifyContent={"center"} alignItems={"center"}>
-            <Heading>C. Munson</Heading>
-          </Grid>
-        </Grid>
+        </Hidden>
       </Grid>
     </Box>
   );

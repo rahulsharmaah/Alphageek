@@ -5,7 +5,7 @@ import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
 import { Grid } from "@mui/material";
 import React from "react";
-import SaveButton from "../../Button";
+import StyledButton from "../Button";
 
 const ContactFormWithImage = () => {
   return (
@@ -33,7 +33,7 @@ const ContactFormWithImage = () => {
                   <input type="file" accept="image/*" />
                 </Grid>
                 <Grid item xs={12}>
-                  <SaveButton width={"100%"}>Submit</SaveButton>
+                  <StyledButton title="Submit" width={"100"}/>
                 </Grid>
               </Grid>
             </form>

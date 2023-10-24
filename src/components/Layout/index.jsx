@@ -4,6 +4,8 @@ import Sidebar from "../Sidebar";
 import Header from "../Header";
 import Footer from "../Footer";
 import styled from "styled-components";
+import { Hidden, useMediaQuery, useTheme } from "@mui/material";
+import StickyNavbar from "../StickyNavbar";
 
 const LayoutContainer = styled.div`
   display: flex;
@@ -21,15 +23,19 @@ const SidebarContent = styled.div`
 `;
 
 function Layout() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <LayoutContainer>
-      <Header />
+      {isMobile ? <StickyNavbar /> : <Header />}
       <MainContent>
-        <aside>
-          <SidebarContent>
-            <Sidebar />
-          </SidebarContent>
-        </aside>
+        <Hidden smDown>
+          <aside>
+            <SidebarContent>
+              <Sidebar />
+            </SidebarContent>
+          </aside>
+        </Hidden>
         <Outlet />
       </MainContent>
       <Footer />

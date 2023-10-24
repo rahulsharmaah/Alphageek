@@ -35,7 +35,7 @@ const ProgressLabel = styled.span`
   font-weight: bold;
 `;
 
-const Progress = ({ percentage }) => {
+const ProgressBar = ({ percentage }) => {
   return (
     <ProgressBarContainer>
       <ProgressFiller percentage={percentage} />
@@ -44,4 +44,4 @@ const Progress = ({ percentage }) => {
   );
 };
 
-export default Progress;
+export default ProgressBar;

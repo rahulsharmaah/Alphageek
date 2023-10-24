@@ -48,10 +48,10 @@ const MemberTable = () => {
         mb={4}
         mt={4}
       >
-        <Grid item md={10}>
+        <Grid item md={10} xs={12}>
           <TableContainer component={Paper} sx={{ backgroundColor: "#FAFAFA" }}>
             <Table>
-              <TableHead sx={{textAlign:"center"}}>
+              <TableHead sx={{ textAlign: "center" }}>
                 <TableRow>
                   <TableCell>Name</TableCell>
                   <TableCell>Email</TableCell>

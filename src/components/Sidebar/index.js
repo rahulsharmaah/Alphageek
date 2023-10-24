@@ -14,6 +14,8 @@ import SupportFill from "../icons/SupportFill";
 import LightningFill from "../icons/LightningFill";
 import SettingLogo from "../icons/SettingLogo";
 import styled from "styled-components";
+import HamburgerMenu from "../HamburgerMenu";
+import ChannelEngagementLogo from "../icons/ChannelEngagementLogo";
 
 const activeClassName = "activeListItem";
 
@@ -74,10 +76,16 @@ const Sidebar = () => {
       link: "/",
     },
     {
-      id: 3,
-      text: "Channels",
-      image: <LightningFill />,
+      id: 2,
+      text: "Channel",
+      image: <ChannelEngagementLogo />,
       link: "/channel-engagement",
+    },
+    {
+      id: 3,
+      text: "Ecosystem",
+      image: <LightningFill />,
+      link: "/ecosystem",
     },
     {
       id: 4,
@@ -100,34 +108,37 @@ const Sidebar = () => {
   ];
 
   return (
-    <Hidden smDown>
-      <SidebarList isTextVisible={isTextVisible}>
-        <TopToggle>
-          <ToggleButton onClick={handleClick}>
-            &#9776;
-          </ToggleButton>
-        </TopToggle>
-        {items.map((item) => (
-          <ListItem key={item.id} onClick={handleClick}>
-            <NavLink
-              to={item.link}
-              className={({ isActive }) => (isActive ? activeClassName : "")}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <ListItemIcon className={activeClassName}>
-                {item.image}
-              </ListItemIcon>
-              <ListItemText
-                primary={item.text}
-                primaryTypographyProps={{
-                  display: isTextVisible ? "inline-block" : "none",
-                }}
-              />
-            </NavLink>
-          </ListItem>
-        ))}
-      </SidebarList>
-    </Hidden>
+    <>
+      <Hidden smDown>
+        <SidebarList isTextVisible={isTextVisible}>
+          <TopToggle>
+            <ToggleButton onClick={handleClick}>&#9776;</ToggleButton>
+          </TopToggle>
+          {items.map((item) => (
+            <ListItem key={item.id} onClick={handleClick}>
+              <NavLink
+                to={item.link}
+                className={({ isActive }) => (isActive ? activeClassName : "")}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <ListItemIcon className={activeClassName}>
+                  {item.image}
+                </ListItemIcon>
+                <ListItemText
+                  primary={item.text}
+                  primaryTypographyProps={{
+                    display: isTextVisible ? "inline-block" : "none",
+                  }}
+                />
+              </NavLink>
+            </ListItem>
+          ))}
+        </SidebarList>
+      </Hidden>
+      <Hidden smUp>
+        <HamburgerMenu />
+      </Hidden>
+    </>
   );
 };
 

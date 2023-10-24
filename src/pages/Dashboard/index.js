@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Grid } from "@mui/material";
 import CreateTabs from "../../components/Tabs";
 import DashboardData from "../../components/DashboardData";
+import Separator from "../../components/Separator";
 
 const Dashboard = () => {
   const tabLabelsData = ["Insights", "Saved", "Shared"];
@@ -15,9 +16,10 @@ const Dashboard = () => {
             activeTab={activeTab}
             setActiveTab={setActiveTab}
           />
+        <Separator />
         </Grid>
         <Grid item xs={12}>
-          {activeTab === 0 && <DashboardData /> }
+          {activeTab === 0 && <DashboardData />}
         </Grid>
       </Grid>
     </>

@@ -52,7 +52,7 @@ const CreateTabs = ({ tabLabels, activeTab, setActiveTab }) => {
         onChange={handleChange}
         variant="standard"
         scrollButtons={false}
-        orientation="verical"
+        orientation="horizontal"
         aria-label="scrollable prevent tabs example"
       >
         {tabLabels.map((label, index) => (
@@ -61,14 +61,7 @@ const CreateTabs = ({ tabLabels, activeTab, setActiveTab }) => {
       </StyledTabs>
     </Grid>
     </Grid>
-    <Separator/>
     </>
   );
 };
-const Separator = styled.div`
-  flex: 1;
-  height: 2px;
-  background: #ccc;
-  margin: 0 10px;
-`;
 export default CreateTabs;

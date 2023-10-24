@@ -12,14 +12,16 @@ import Layout from "./components/Layout";
 import Setting from "./pages/Setting";
 import Support from "./pages/Support";
 import ChannelEngagement from "./pages/Channel Engagement";
-import Gamification from "./pages/Gaminfication";
+import Gamification from "./pages/Gamification";
 import Dashboard from "./pages/Dashboard";
+import Ecosystem from "./pages/Ecosystem";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<Dashboard />} />
       <Route path="/channel-engagement" element={<ChannelEngagement />} />
+      <Route path="/ecosystem" element={<Ecosystem />} />
       <Route path="/gamification" element={<Gamification />} />
       <Route path="/setting" element={<Setting />} />
       <Route path="/support" element={<Support />} />

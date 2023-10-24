@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import CreateTabs from "../../components/Tabs";
-import Separator from "../../components/Separator";
-import EngagementCardsSection from "../../components/ChannelEngagementComponents/EngagementCardsSection";
-import Insights from "../../components/ChannelEngagementComponents/Insights";
 import { Grid } from "@mui/material";
+import Separator from "../../components/Separator";
+import CreateTabs from "../../components/Tabs";
 
-const ChannelEngagement = () => {
-  const tabLabelsData = ["Engagement", "Insight"];
+const Gamification = () => {
+  const tabLabelsData = ["Active", "Performance", "Video"];
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -21,11 +19,11 @@ const ChannelEngagement = () => {
           <Separator />
         </Grid>
         <Grid item xs={12} md={12}>
-          {activeTab === 0 ? <EngagementCardsSection /> : <Insights />}
+          {/* {activeTab === 0 ? <EngagementCardsSection /> : <Insights />} */}
         </Grid>
       </Grid>
     </>
   );
 };
 
-export default ChannelEngagement;
+export default Gamification;

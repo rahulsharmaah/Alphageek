@@ -4,10 +4,12 @@ import {
   Card,
   CardContent,
   CardMedia,
+  Grid,
   LinearProgress,
   Typography,
 } from "@mui/material";
-
+import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import StyledButton from "../Button";
 const EngagementCard = ({
   title,
   partner,
@@ -17,71 +19,127 @@ const EngagementCard = ({
   likes,
   shares,
   progressBars,
+  progressBarsHeading,
+  buttonText,
 }) => {
   return (
-    <CardContainer>
-      <LogoImage src={logo} alt="Partner Logo" />
+    <CardContainer
+      sx={{
+        borderRadius: "10px",
+        border: "1px solid var(--stroke, #EBEBEB)",
+        background: " var(--background-white, #FDFDFF)",
+      }}
+    >
       <CardContent>
-        <Typography
-          variant="h5"
-          component="div"
-          style={{ textAlign: "center" }}
-        >
-          {title}
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          color="textSecondary"
-          style={{ textAlign: "center" }}
-        >
-          in partnership with {partner}
-        </Typography>
+        {/* <------------------Heading section ----------------------------> */}
+        <Grid2 container alignItems="center">
+          <Grid2 item md={3}>
+            <Typography variant="h5">{title} </Typography>
+          </Grid2>
+          <Grid2 item md={6}>
+            <Typography variant="body" color="textSecondary">
+              in partnership with {partner}{" "}
+            </Typography>
+          </Grid2>
+          <Grid2 item md={3}>
+            {" "}
+            <LogoImage src={logo} alt="Partner Logo" />{" "}
+          </Grid2>
+        </Grid2>
+        {/* <--------------------------card media-----------------------------------------------> */}
         <CardMedia
           component="img"
           alt="Engagement Image"
           image={image}
-          style={{ borderRadius: "10px", margin: "10px 0" }}
+          style={{
+            borderRadius: "10px",
+            margin: "0px 0",
+            alignItems: "center",
+          }}
         />
         <Typography
-          variant="body2"
-          color="textSecondary"
-          style={{ textAlign: "center" }}
+          variant="subtitle2"
+          color="textPrimary"
+          style={{
+            textAlign: "start",
+            fontWeight: "600",
+            padding: "2px 4px",
+          }}
         >
           {tagline}
         </Typography>
-        <LikesAndShares>
-          <Typography
-            variant="body2"
-            color="textSecondary"
-            style={{ textAlign: "center" }}
-          >
-            <LikeIcon>&#10084;</LikeIcon> {likes} likes
-          </Typography>
-          <Typography
-            variant="body2"
-            color="textSecondary"
-            style={{ textAlign: "center" }}
-          >
-            Share {shares} <ArchivesIcon>&#128190;</ArchivesIcon>
-          </Typography>
-        </LikesAndShares>
+        {/* <---------------------------Like Share Container -------------------------------> */}
+        <LikesAndSharesContainer>
+          <LikesAndShares>
+            <Typography
+              variant="subtitle2"
+              color="textSecondary"
+              style={{
+                textAlign: "start",
+                color: "var(--Darkest, #1C2753)",
+                fontWeight: "500",
+              }}
+            >
+              <LikeIcon>&#10084;</LikeIcon> {likes} likes
+            </Typography>
+          </LikesAndShares>
+          <LikesAndShares>
+            <Typography
+              variant="subtitle2"
+              color="textSecondary"
+              style={{ textAlign: "start", color: "var(--Darkest, #1C2753)" }}
+            >
+              Share {shares} <ArchivesIcon>&#128190;</ArchivesIcon>
+            </Typography>
+          </LikesAndShares>
+        </LikesAndSharesContainer>
+        {/* <----------------------------Progress bar container-------------------------------------> */}
         <ProgressBarContainer>
-          <Typography variant="body2" color="textSecondary">
-            Stickiness Ratio (specific to quarter)
-          </Typography>
           {progressBars.map((progress, index) => (
             <div key={index}>
-              <Typography variant="body2" color="textSecondary">
-                {progress.label}
-              </Typography>
-              <ProgressBar variant="determinate" value={progress.percentage} />
-              <Typography variant="body2" color="textSecondary">
-                {progress.percentage}%
-              </Typography>
-              <InfoIcon>&#9432;</InfoIcon>
+              <Grid container>
+                <Grid item md={8} xs={8}>
+                  <Typography
+                    variant="subtitle2"
+                    color="#1C2753"
+                    fontWeight={600}
+                    dangerouslySetInnerHTML={{ __html: progressBarsHeading }}
+                  >
+                    {/* <b>{progressBarsHeading}</b> */}
+                  </Typography>
+                </Grid>
+                <Grid item md={4} xs={4}>
+                  <Typography
+                    variant="subtitle2"
+                    color="#1C2753"
+                    fontWeight={600}
+                  >
+                    {progress.percentage}%
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid2 container alignItems={"center"} py={2}>
+                <Grid2 item md={11} xs={10}>
+                  {" "}
+                  <ProgressBar
+                    variant="determinate"
+                    key={index}
+                    isLast={index === progressBars.length - 1}
+                    value={progress.percentage}
+                    sx={{
+                      bgcolor: "	#D3D3D3",
+                    }}
+                  />
+                </Grid2>
+                <Grid2 item md={1} xs={2}>
+                  <InfoIcon>&#9432;</InfoIcon>
+                </Grid2>
+              </Grid2>
             </div>
           ))}
         </ProgressBarContainer>
+        {/* <------------------Button-----------------> */}
+        <StyledButton title={buttonText} width={100} />
       </CardContent>
     </CardContainer>
   );
@@ -95,16 +153,27 @@ const CardContainer = styled(Card)`
 `;
 
 const LogoImage = styled.img`
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  width: auto;
+  height: 30px;
+  border-radius: 3%;
   margin: 10px 0;
 `;
-
+const LikesAndSharesContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 2px 0;
+`;
 const LikesAndShares = styled.div`
   display: flex;
-  justify-content: space-around;
-  margin: 10px 0;
+  align-items: center;
+  width: auto;
+  height: 34px;
+  padding: 4px 8px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 1px solid #eef4f6;
+  background: var(--Light-gray, #f8fafb);
 `;
 
 const LikeIcon = styled.span`
@@ -118,25 +187,31 @@ const ArchivesIcon = styled.span`
 const ProgressBarContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex: 1;
   width: 100%;
   margin: 10px 0;
 `;
 
 const ProgressBar = styled(LinearProgress)`
   width: 100%; /* Adjust the width as needed */
-  height: 20px; /* Adjust the height as needed */
+  height: 18px !important; /* Adjust the height as needed */
   border-radius: 38px;
-  background: linear-gradient(90deg, #27b1fe 0.46%, #1dc560 118.27%);
   margin: 8px 0;
-  transform: scaleX(-1);
+  .css-5xe99f-MuiLinearProgress-bar1 {
+    background: ${(props) =>
+      props.isLast
+        ? "var(--Orange, #E58828)"
+        : "linear-gradient(90deg, #27b1fe 0.46%, #1dc560 118.27%)"} !important;
+  }
+  &:last-of-type .MuiLinearProgress-bar {
+    background: linear-gradient(90deg, red, yellow);
+  }
+  /* transform: scaleX(-1); */
 `;
 
 const InfoIcon = styled.span`
-  color: grey;
-  background: lightgrey;
-  padding: 4px;
-  border-radius: 50%;
+  /* color: grey; */
+  /* background: lightgrey; */
 `;
 
 export default EngagementCard;

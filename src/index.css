@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: '#f0f0f0';
-  font-family: 'Poppins';
+  font-family: Poppins;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
