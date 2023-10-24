@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import StyledButton from "../Button";
+import { styled as muiStyled } from "@mui/material";
 const EngagementCard = ({
   title,
   logo,
@@ -125,11 +126,6 @@ const EngagementCard = ({
                     key={index}
                     isLast={index === progressBars.length - 1}
                     value={progress.percentage}
-                    backgroundColor={
-                      index === progressBars.length - 1
-                        ? "var(--Orange, #E58828)"
-                        : "linear-gradient(90deg, #27b1fe 0.46%, #1dc560 118.27%)"
-                    }
                   />
                 </Grid2>
                 <Grid2 item md={1} xs={2}>
@@ -193,7 +189,7 @@ const ProgressBarContainer = styled.div`
   margin: 10px 0;
 `;
 
-const ProgressBar = styled(LinearProgress)`
+const ProgressBar = muiStyled(LinearProgress)`
   width: 100%; /* Adjust the width as needed */
   height: 18px !important; /* Adjust the height as needed */
   border-radius: 38px;
