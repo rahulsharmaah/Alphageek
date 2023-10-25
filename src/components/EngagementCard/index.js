@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import StyledButton from "../Button";
-import { styled as muiStyled } from "@mui/material";
+// import { styled as muiStyled } from "@mui/material";
 const EngagementCard = ({
   title,
   logo,
@@ -189,7 +189,7 @@ const ProgressBarContainer = styled.div`
   margin: 10px 0;
 `;
 
-const ProgressBar = muiStyled(LinearProgress)`
+const ProgressBar = styled(LinearProgress)`
   width: 100%; /* Adjust the width as needed */
   height: 18px !important; /* Adjust the height as needed */
   border-radius: 38px;
@@ -197,7 +197,7 @@ const ProgressBar = muiStyled(LinearProgress)`
   .css-5xe99f-MuiLinearProgress-bar1 {
     background: ${(props) =>
       props.isLast
-        ? "var(--Orange, #E58828) !important"
+        ? "var(--Orange, #E58828) "
         : "linear-gradient(90deg, #27b1fe 0.46%, #1dc560 118.27%)"} !important;
   }
   /* transform: scaleX(-1); */

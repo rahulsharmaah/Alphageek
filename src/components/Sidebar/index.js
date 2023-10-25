@@ -135,7 +135,7 @@ const Sidebar = () => {
           ))}
         </SidebarList>
       </Hidden>
-      <Hidden mdUp>
+      <Hidden smUp>
         <HamburgerMenu />
       </Hidden>
     </>

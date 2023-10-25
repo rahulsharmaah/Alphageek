@@ -21,7 +21,8 @@ const ChannelEngagement = () => {
           <Separator />
         </Grid>
         <Grid item xs={12} md={12}>
-          {activeTab === 0 ? <EngagementCardsSection /> : <Insights />}
+          {activeTab === 0 && <EngagementCardsSection />}
+          {activeTab === 1 && <Insights />}
         </Grid>
       </Grid>
     </>

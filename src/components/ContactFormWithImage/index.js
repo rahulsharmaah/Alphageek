@@ -1,6 +1,5 @@
 import TextField from "@mui/material/TextField";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
-// import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
 import { Grid } from "@mui/material";
@@ -33,7 +32,7 @@ const ContactFormWithImage = () => {
                   <input type="file" accept="image/*" />
                 </Grid>
                 <Grid item xs={12}>
-                  <StyledButton title="Submit" width={"100"}/>
+                  <StyledButton title="Submit" width={"100"} />
                 </Grid>
               </Grid>
             </form>
@@ -41,11 +40,11 @@ const ContactFormWithImage = () => {
         </Grid>
 
         {/* Right Side (Image) */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} style={{ display: "flex", alignItems: "center" }}>
           <img
-            src="{your-image-url.jpg}"
+            src="Vector-(2).png"
             alt="{Your Image}"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "500px",height:"500px"}}
           />
         </Grid>
       </Grid>

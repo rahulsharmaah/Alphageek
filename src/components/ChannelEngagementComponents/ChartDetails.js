@@ -7,7 +7,7 @@ const chartData = {
     },
     {
       label: "Website",
-      data: [{ x: 12, y: 13, r: 78 }],
+      data: [{ x: 11.5, y: 13, r: 78 }],
       borderColor: "1 px solid black",
       hoverBackgroundColor: "rgba(0, 171, 169, 0.67)",
       hoverBorderColor: "transparent",
@@ -25,6 +25,13 @@ const chartData = {
         { x: 12.9101, y: 12.6, r: 0 },
       ],
       backgroundColor: "#FF0097",
+    },
+    {
+      label: "Activations",
+      data: [
+        { x: 11.1101, y: 12.6, r: 32 },
+      ],
+      backgroundColor: "#7FBA00",
     },
   ],
 };
