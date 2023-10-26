@@ -23,10 +23,11 @@ const ContactFormWithImage = () => {
                   <TextField label="Company" fullWidth variant="outlined" />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextareaAutosize
+                  <TextField
+                  type="text-area"
                     minRows={3}
                     placeholder="Your Message"
-                    style={{ width: "100%"}}
+                    style={{ width: "100%", borderRadius: "10px" }}
                   />
                 </Grid>
                 <Grid item xs={12}>

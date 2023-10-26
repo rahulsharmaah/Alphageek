@@ -46,7 +46,7 @@ const CreateTabs = ({ tabLabels, activeTab, setActiveTab }) => {
   return (
     <>
     <Grid container ml={4}>
-    <Grid item md={8}>
+    <Grid item md={8} xs={12}>
       <StyledTabs
         value={activeTab}
         onChange={handleChange}
