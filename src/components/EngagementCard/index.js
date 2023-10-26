@@ -101,7 +101,12 @@ const EngagementCard = ({
           {progressBars.map((progress, index) => (
             <div key={index}>
               <Grid container>
-                <Grid item md={8} xs={8}>
+                <Grid
+                  item
+                  md={8}
+                  xs={8}
+                  sx={{ display: "flex", justifyContent: "flex-start" }}
+                >
                   <Typography
                     variant="subtitle2"
                     color="#1C2753"
@@ -111,10 +116,7 @@ const EngagementCard = ({
                   </Typography>
                 </Grid>
                 <Grid item md={4} xs={4}>
-                  <Typography
-                    variant="subtitle2"
-                    color="#1C2753"
-                  >
+                  <Typography variant="subtitle2" color="#1C2753">
                     {progress.percentage}%
                   </Typography>
                 </Grid>
