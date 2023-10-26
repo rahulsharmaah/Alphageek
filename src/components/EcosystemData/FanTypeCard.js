@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Card, CardContent, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import StyledButton from "../Button";
 import { Line } from "react-chartjs-2";
 import { data, options } from "./lineChartData";
 import LinearProgressBar from "../LinearProgressBar";
@@ -62,7 +61,9 @@ const FanTypeCard = ({
           ))}
         </ProgressBarContainer>
         {/* <------------------Button-----------------> */}
-        <StyledButton title={buttonText} width={100} />
+        <ImageSection>
+        <img src={"exp-24.png"} alt="icon" style={{ marginRight: "10px" }} />
+        </ImageSection>
       </CardContent>
     </CardContainer>
   );
@@ -87,5 +88,11 @@ const CardMedia = styled.div`
     width: auto;
     background: "#F4F7FA";
   }
+`;
+const ImageSection =styled.div`
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    width:100%;
 `;
 export default FanTypeCard;

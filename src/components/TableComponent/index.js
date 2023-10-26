@@ -14,7 +14,6 @@ const Container = styled(TableContainer)`
   background: white;
   border: 1px solid #ccc;
   margin-bottom: 16px;
-  overflow-x: hidden;
 `;
 
 const CustomTable = styled(Table)`
@@ -40,6 +39,7 @@ const TableComponent = ({ heading, data, needHeading = true }) => {
                   color: "#fff",
                   textAlign: "center",
                   borderRadius: "5px 5px 0px 0px",
+                  overflowX: "hidden"
                 }}
               >
                 {heading}
