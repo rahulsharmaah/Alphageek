@@ -33,7 +33,7 @@ const data = {
   datasets: [
     {
       label: "Website",
-      data: [5000, 15000, 20000],
+      data: [5, 15, 20],
       fill: false,
       borderColor: "#FF0097", // Pink
       pointBackgroundColor: "#FF0097", // Match legend color
@@ -42,7 +42,7 @@ const data = {
     },
     {
       label: "Mobile",
-      data: [8000, 12000, 18000],
+      data: [8, 12, 18],
       fill: false,
       borderColor: "#00ABA9", // Blue
       pointBackgroundColor: "#00ABA9", // Match legend color
@@ -51,7 +51,7 @@ const data = {
     },
     {
       label: "Newsletter",
-      data: [12000, 18000, 22000],
+      data: [12, 18, 22],
       fill: false,
       borderColor: "#F09609", // Orange
       pointBackgroundColor: "#F09609", // Match legend color

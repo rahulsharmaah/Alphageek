@@ -28,11 +28,11 @@ const Header = () => {
         </Grid>
         <Grid
           container
-          md={6}
           alignItems={"flex-end"}
           alignContent={"flex-end"}
+          md={5.8}
         >
-          <SearchGridItem md={10}>
+          <SearchGridItem md={10} xs={4}>
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />

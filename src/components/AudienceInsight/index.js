@@ -3,30 +3,30 @@ import Accordion from "../Accordion";
 import TableComponent from "../TableComponent";
 import styled from "styled-components";
 import { Grid } from "@mui/material";
-import BasketBall from "../icons/BasketBall.svg" 
+import BasketBall from "../icons/BasketBall.svg";
 const tableData1 = [
-  { label: "Heading1", value: "Value1" },
-  { label: "Heading2", value: "Value2" },
+  { label: "ER% (avg)", value: "Engagements (tot)" },
+  { label: "67%", value: "  61,577" },
 ];
 
 const tableData2 = [
-  { label: "Heading1", value: "Value1" },
-  { label: "Heading2", value: "Value2" },
+  { label: "Social Shares (tot) ", value: "QxQ" },
+  { label: " 35,000", value: "+ 60%" },
 ];
 
 const tableData3 = [
-  { label: "Heading1", value: "Value1" },
-  { label: "Heading2", value: "Value2" },
+  { label: "CTR%", value: "Active Links" },
+  { label: "78%", value: "12" },
 ];
 
 const tableData4 = [
-  { label: "Heading1", value: "Value1" },
-  { label: "Heading2", value: "Value2" },
+  { label: "Participants (Tot)", value: "Invitations (Tot)" },
+  { label: "12,200", value: "7,791" },
 ];
 
 const tableData5 = [
-  { label: "Heading1", value: "Value1" },
-  { label: "Heading2", value: "Value2" },
+  { label: "Total Views", value: "Social Shares" },
+  { label: "9,700", value: "5,560" },
 ];
 
 const AudienceInsight = () => {
@@ -41,20 +41,20 @@ const AudienceInsight = () => {
           <DotsButton>...</DotsButton>
         </Container>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={2.4} sm={6}>
-            <TableComponent heading="Table 1" data={tableData1} />
+          <Grid item xs={12} md={2.3} sm={6}>
+            <TableComponent heading="Content Activity " data={tableData1} />
           </Grid>
-          <Grid item xs={12} md={2.4} sm={6}>
-            <TableComponent heading="Table 2" data={tableData2} />
+          <Grid item xs={12} md={2.3} sm={6}>
+            <TableComponent heading="Network Growth " data={tableData2} />
           </Grid>
-          <Grid item xs={12} md={2.4} sm={6}>
-            <TableComponent heading="Table 3" data={tableData3} />
+          <Grid item xs={12} md={2.3} sm={6}>
+            <TableComponent heading="Backlink Performance" data={tableData3} />
           </Grid>
-          <Grid item xs={12} md={2.4} sm={6}>
-            <TableComponent heading="Table 4" data={tableData4} />
+          <Grid item xs={12} md={2.5} sm={6}>
+            <TableComponent heading="Game Interactions" data={tableData4} />
           </Grid>
-          <Grid item xs={12} md={2.4} sm={6}>
-            <TableComponent heading="Table 5" data={tableData5} />
+          <Grid item xs={12} md={2.3} sm={6}>
+            <TableComponent heading="Top Video" data={tableData5} />
           </Grid>
         </Grid>
       </ContentContainer>
@@ -78,16 +78,19 @@ const LeftImage = styled.img`
 `;
 
 const DotsButton = styled.button`
-  background: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  background: var(--White, #fff);
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  align-items: center;
 `;
 
 const ContentContainer = styled.div`
   background: #f0f0f0;
 
-  padding: 18px ;
+  padding: 18px;
 `;
 
 export default AudienceInsight;
