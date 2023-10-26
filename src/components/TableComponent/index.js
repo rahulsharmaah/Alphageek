@@ -53,12 +53,12 @@ const TableComponent = ({ heading, data, needHeading = true }) => {
           {data.map((row, index) => (
             <TableRow key={index}>
               <TableCell>
-                <Typography variant={index === 1 ? "h5" : "h6"}>
+                <Typography variant={index === 1 ? "h6" : "subtitle2"}>
                   {row.label}
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography variant={index === 1 ? "h5" : "h6"}>
+                <Typography variant={index === 1 ? "h6" : "subtitle2"}>
                   {row.value}
                 </Typography>
               </TableCell>
