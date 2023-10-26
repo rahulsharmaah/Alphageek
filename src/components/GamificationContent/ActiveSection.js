@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import React from "react";
 import Accordion from "../Accordion";
 import CardSection from "./CardSection";
-import dummyData from "./dummyData";
+import {dummyData} from "./dummyData";
 import ContentPreviewCard from "./ContentPreviewCard";
 
 const ActiveSection = () => {

@@ -5,6 +5,7 @@ import Paper from "@mui/material/Paper";
 import { Grid } from "@mui/material";
 import React from "react";
 import StyledButton from "../Button";
+import styled from "styled-components";
 
 const ContactFormWithImage = () => {
   return (
@@ -23,9 +24,9 @@ const ContactFormWithImage = () => {
                 </Grid>
                 <Grid item xs={12}>
                   <TextareaAutosize
-                    minRows={4}
+                    minRows={3}
                     placeholder="Your Message"
-                    style={{ width: "100%", padding: "10px" }}
+                    style={{ width: "100%"}}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -40,16 +41,27 @@ const ContactFormWithImage = () => {
         </Grid>
 
         {/* Right Side (Image) */}
-        <Grid item xs={12} md={6} style={{ display: "flex", alignItems: "center" }}>
-          <img
-            src="Vector-(2).png"
-            alt="{Your Image}"
-            style={{ width: "500px",height:"500px"}}
-          />
+        <Grid
+          item
+          xs={12}
+          md={6}
+          style={{ display: "flex", alignItems: "center" }}
+        >
+          <ImageWrapper>
+            <img src="Vector-(2).png" alt="{Your Image}" />
+          </ImageWrapper>
         </Grid>
       </Grid>
     </Container>
   );
 };
 
+const ImageWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
 export default ContactFormWithImage;

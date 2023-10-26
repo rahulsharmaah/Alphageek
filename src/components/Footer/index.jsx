@@ -5,7 +5,7 @@ import { Container } from "@mui/material";
 const StyledFooter = styled(Container)`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #fff;
   color: #333;
   height: auto;
@@ -15,7 +15,7 @@ const StyledFooter = styled(Container)`
 const ContentContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
 `;
 
 const Heading = styled.h1`
@@ -35,10 +35,7 @@ const Footer = () => {
     <StyledFooter>
       <ContentContainer>
         <Heading>Powered By</Heading>
-        <img
-          src={"/AlphaGeekFrame.png"}
-          alt="AlphaGeek"
-        />
+        <img src={"/AlphaGeekFrame.png"} alt="AlphaGeek" />
       </ContentContainer>
     </StyledFooter>
   );

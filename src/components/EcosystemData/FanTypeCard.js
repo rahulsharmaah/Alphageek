@@ -10,7 +10,6 @@ const FanTypeCard = ({
   title,
   tagline,
   progressBars,
-  buttonText,
 }) => {
   return (
     <CardContainer

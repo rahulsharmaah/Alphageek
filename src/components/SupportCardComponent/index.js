@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import DribbleLogo from "../icons/DribbleLogo";
 import styled from "styled-components";
 
-// Dummy data for the cards
 const dummyData = [
   {
     id: 1,
@@ -20,37 +19,33 @@ const dummyData = [
   },
   {
     id: 3,
-    icon: <DribbleLogo />,
+    icon: <DribbleLogo fillColor={"#0060fc"} />,
     sentence: "This is the third card.",
   },
   {
     id: 4,
-    icon: <DribbleLogo />,
+    icon: <DribbleLogo fillColor={"#0060fc"} />,
     sentence: "This is the fourth card.",
   },
   {
     id: 5,
-    icon: <DribbleLogo />,
+    icon: <DribbleLogo fillColor={"#0060fc"} />,
     sentence: "This is the fifth card.",
   },
   {
     id: 6,
-    icon: <DribbleLogo />,
+    icon: <DribbleLogo fillColor={"#0060fc"} />,
     sentence: "This is the sixth card.",
   },
 ];
 
-const CardContainer = styled(Grid)`
-  justify-content: center;
-`;
-
 const CardComponent = ({ icon, sentence }) => {
   return (
-    <Card sx={{ maxWidth: "150" }}>
+    <Card sx={{boxShadow: "31px -6px 22px 0px rgba(0,0,0,0.06)" }}>
       <CardContent>
         <div style={{ display: "flex", alignItems: "center" }}>
           <SvgWrapper>{icon}</SvgWrapper>
-          <Typography variant="body2" color="textPrimary">
+          <Typography variant="subtitle2" color="#0060FC" fontWeight="600">
             {sentence}
           </Typography>
         </div>
@@ -61,21 +56,18 @@ const CardComponent = ({ icon, sentence }) => {
 
 const SupportCardComponent = () => {
   return (
-    <CardContainer container spacing={5} py={3}>
+    <Grid container spacing={3} py={4} px={2}>
       {dummyData.map((data) => (
-        <Grid item key={data.id} xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={4} key={data.id}>
           <CardComponent icon={data.icon} sentence={data.sentence} />
         </Grid>
       ))}
-    </CardContainer>
+    </Grid>
   );
 };
 
 const SvgWrapper = styled.div`
   margin-right: 8px;
-  svg {
-    fill: #0060fc;
-  }
 `;
 
 export default SupportCardComponent;

@@ -3,10 +3,16 @@ import { CardContent, CardMedia, Typography } from "@mui/material";
 import CardHeading from "./CardHeading";
 import styled from "styled-components";
 
-const ContentPreviewCard = ({ title, logo, image, description }) => {
+const ContentPreviewCard = ({
+  title,
+  logo,
+  image,
+  description,
+  isRequire = true,
+}) => {
   return (
     <>
-      <CardHeading title={title} width={100} />
+      {isRequire && <CardHeading title={title} width={100} />}
 
       <CardContent
         sx={{
@@ -39,7 +45,7 @@ const ContentPreviewCard = ({ title, logo, image, description }) => {
             width={"100%"}
             style={{
               borderRadius: "10px ",
-              objectFit: "cover",
+              objectFit: "contain",
             }}
           />
           <Typography variant="h5" textAlign={"center"} gutterBottom={3} py={4}>
@@ -69,7 +75,7 @@ const ContentPreviewCard = ({ title, logo, image, description }) => {
   );
 };
 const Wrapper = styled.div`
-  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

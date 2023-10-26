@@ -6,15 +6,15 @@ import ContactFormWithImage from "../../components/ContactFormWithImage";
 
 const Support = () => {
   return (
-    <Grid container  justifyContent="center" alignItems="center">
+    <Grid container justifyContent="center" alignItems="center" px={2}>
       <Grid item xs={12}>
         <Accordion title={"Onboarding Tutorials"}>
-        <SupportCardComponent />
+          <SupportCardComponent />
         </Accordion>
       </Grid>
       <Grid item xs={12}>
         <Accordion title={"Onboarding Tutorials"}>
-        <ContactFormWithImage />
+          <ContactFormWithImage />
         </Accordion>
       </Grid>
     </Grid>

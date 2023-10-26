@@ -22,4 +22,18 @@ const dummyData = [
     ],
   },
 ];
-export default dummyData;
+
+const dummyData2 = [
+  {
+    title: "Gamified Surveys & Quizzes",
+    image: "image 330.png",
+    progressBars: [
+      { title: "Time Spent ", label: "Progress 1", percentage: 50 },
+      { title: "Completion Rate ", label: "Progress 2", percentage: 75 },
+      { title: "Social Shares", label: "Progress 3", percentage: 30 },
+      { title: "New Users", label: "Progress 4", percentage: 90 },
+      { title: "Logo Views", label: "Progress 5", percentage: 80 },
+    ],
+  },
+];
+export { dummyData, dummyData2 };
