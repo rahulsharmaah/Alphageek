@@ -30,7 +30,7 @@ const Search = muiStyled("div")(({ theme }) => ({
   width: "100%",
   border: "1px solid",
   [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(1),
+    marginLeft: theme.spacing(0),
     width: "auto",
   },
 }));

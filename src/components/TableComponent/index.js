@@ -14,6 +14,7 @@ const Container = styled(TableContainer)`
   background: white;
   border: 1px solid #ccc;
   margin-bottom: 16px;
+  overflow-x: hidden;
 `;
 
 const CustomTable = styled(Table)`
