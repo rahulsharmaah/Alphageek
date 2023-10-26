@@ -28,9 +28,7 @@ const chartData = {
     },
     {
       label: "Activations",
-      data: [
-        { x: 11.1101, y: 12.6, r: 32 },
-      ],
+      data: [{ x: 11.1101, y: 12.6, r: 32 }],
       backgroundColor: "#7FBA00",
     },
   ],
@@ -48,6 +46,23 @@ const chartOptions = {
   plugins: {
     legend: {
       display: true,
+      position: "left",
+      title: {
+        FontFace: "Poppins",
+        fontWeight: "500",
+        color: "blue !Important", // Change the color here
+        fontSize: 16, // Change the font size here
+      },
+    },
+    title: {
+      display: true,
+      text: "Activity by Channel (Total Engagements)",
+      position: "top",
+      textAlign: "right",
+      FontFace: "Poppins",
+      fontWeight: "500",
+      color: "green", // Change the color here
+      fontSize: 25, // Change the font size here
     },
     annotation: {
       //

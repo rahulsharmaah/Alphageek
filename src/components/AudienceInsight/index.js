@@ -20,7 +20,7 @@ const tableData3 = [
 ];
 
 const tableData4 = [
-  { label: "Participants (Tot)", value: "Invitations (Tot)" },
+  { label: "Participants(Tot)", value: "Invitations(Tot)" },
   { label: "12,200", value: "7,791" },
 ];
 

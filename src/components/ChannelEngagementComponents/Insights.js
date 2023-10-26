@@ -17,7 +17,7 @@ const Insights = () => {
   return (
     <>
       {/* First Column */}
-      <Grid2 container spacing={3} justifyContent={"center"}>
+      <Grid2 container spacing={1} justifyContent={"center"}>
         <Grid2 item xs={12} md={7}>
           <Grid2 item md={4}>
             <CardContainer>

@@ -17,7 +17,6 @@ const AccordionHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #f0f0f0;
   cursor: pointer;
 `;
 
@@ -38,7 +37,6 @@ const Separator = styled.div`
 
 const AccordionContent = styled.div`
   height: ${(props) => (props.isExpanded ? "100%" : "0")};
-  background-color: "#f0f0f0";
   overflow: hidden;
   transition: height 0.3s ease-in-out;
   padding: ${(props) => (props.isExpanded ? "10px" : "0")};

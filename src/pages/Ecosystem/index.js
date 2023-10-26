@@ -12,7 +12,7 @@ const Ecosystem = () => {
   return (
     <>
       <Grid container>
-        <Grid item xs={12} md={12}>
+        <Grid item xs={12} md={12} py={2}>
           <CreateTabs
             tabLabels={tabLabelsData}
             activeTab={activeTab}

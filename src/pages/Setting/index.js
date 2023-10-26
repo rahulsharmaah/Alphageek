@@ -10,7 +10,7 @@ const Setting = () => {
 
   return (
     <Grid container spacing={3}>
-      <Grid item xs={12}>
+      <Grid item xs={12} py={2}>
         <CreateTabs
           tabLabels={tabLabelsData}
           activeTab={activeTab}

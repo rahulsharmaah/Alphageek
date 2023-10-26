@@ -4,6 +4,18 @@ const chartData = {
       label: "Newsletter",
       data: [{ x: 9.8101, y: 13.012, r: 50 }],
       backgroundColor: "#F09609",
+      annotations: [
+        {
+          type: "number",
+          x: 9.8101,
+          y: 13.012,
+          r:60,
+          content: "30%",
+          fontSize: 42, // Change the font size here
+          backgroundColor: "rgba(255, 0, 0, 0.5)", // Background color
+          borderColor: "red", // Border color
+        },
+      ],
     },
     {
       label: "Website",
@@ -12,7 +24,7 @@ const chartData = {
       hoverBackgroundColor: "rgba(0, 171, 169, 0.67)",
       hoverBorderColor: "transparent",
       hoverRadius: 12,
-      pointHoverRadius: 12,
+      pointHoverRadius: 28,
       pointStyle: "circle",
       pointBorderColor: "transparent",
       pointBackgroundColor: "rgba(0, 171, 169, 0.67)",
@@ -41,6 +53,24 @@ const chartOptions = {
   plugins: {
     legend: {
       display: true,
+      position: "left",
+      title: {
+        FontFace: "Poppins",
+        fontWeight: "500",
+        color: "blue !Important", // Change the color here
+        fontSize: 16,
+        borderWidth:5, // Change the font size here
+      },
+    },
+    title: {
+      display: false,
+      text: "Activity by Channel",
+      position: "top",
+      textAlign: "right",
+      FontFace: "Poppins",
+      fontWeight: "500",
+      color: "green", // Change the color here
+      fontSize: 25, // Change the font size here
     },
     annotation: {
       //
