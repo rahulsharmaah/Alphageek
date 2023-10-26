@@ -35,6 +35,7 @@ const TableComponent = ({ heading, data, needHeading = true }) => {
             <TableRow>
               <TableCell
                 colSpan={2}
+                variant="h5"
                 sx={{
                   color: "#fff",
                   textAlign: "center",
@@ -53,12 +54,12 @@ const TableComponent = ({ heading, data, needHeading = true }) => {
           {data.map((row, index) => (
             <TableRow key={index}>
               <TableCell>
-                <Typography variant={index === 1 ? "h6" : "subtitle2"}>
+                <Typography variant={index === 1 ? "h3" : "h6"}>
                   {row.label}
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography variant={index === 1 ? "h6" : "subtitle2"}>
+                <Typography variant={index === 1 ? "h3" : "h6"}>
                   {row.value}
                 </Typography>
               </TableCell>

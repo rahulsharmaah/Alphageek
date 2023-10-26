@@ -33,7 +33,7 @@ const EngagementCard = ({
       <CardContent>
         {/* <------------------Heading section ----------------------------> */}
         <Grid2 container alignItems="center">
-          <Grid2 item md={3}>
+          <Grid2 item md={2}>
             <Typography variant="h5">{title} </Typography>
           </Grid2>
           <Grid2 item md={6}>
@@ -58,7 +58,7 @@ const EngagementCard = ({
           }}
         />
         <Typography
-          variant="subtitle2"
+          variant="body2"
           color="textPrimary"
           style={{
             textAlign: "start",
@@ -72,7 +72,7 @@ const EngagementCard = ({
         <LikesAndSharesContainer>
           <LikesAndShares>
             <Typography
-              variant="subtitle2"
+              variant="body2"
               color="textSecondary"
               style={{
                 textAlign: "start",
@@ -85,9 +85,13 @@ const EngagementCard = ({
           </LikesAndShares>
           <LikesAndShares>
             <Typography
-              variant="subtitle2"
+              variant="body2"
               color="textSecondary"
-              style={{ textAlign: "start", color: "var(--Darkest, #1C2753)" }}
+              style={{
+                textAlign: "start",
+                color: "var(--Darkest, #1C2753)",
+                fontWeight: "500",
+              }}
             >
               Share {shares} <ArchivesIcon>&#128190;</ArchivesIcon>
             </Typography>
@@ -100,7 +104,7 @@ const EngagementCard = ({
               <Grid container>
                 <Grid item md={8} xs={8}>
                   <Typography
-                    variant="subtitle2"
+                    variant="body2"
                     color="#1C2753"
                     fontWeight={600}
                     dangerouslySetInnerHTML={{ __html: progressBarsHeading }}

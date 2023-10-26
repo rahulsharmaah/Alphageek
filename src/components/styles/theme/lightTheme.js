@@ -14,7 +14,7 @@ const lightTheme = unstable_createMuiStrictModeTheme({
     mode: "light",
     colors,
     fonts: {
-      primary: 'Poppins',
+      primary: "Poppins",
     },
   },
   breakpoints: {
@@ -36,6 +36,30 @@ const lightTheme = unstable_createMuiStrictModeTheme({
     h2: {
       fontWeight: 600,
       fontSize: "18px",
+      lineHeight: "44px",
+      fontFamily: "Poppins",
+    },
+    h3: {
+      fontWeight: 600,
+      fontSize: "20px",
+      lineHeight: "44px",
+      fontFamily: "Poppins",
+    },
+    h4: {
+      fontWeight: 600,
+      fontSize: "20px",
+      lineHeight: "44px",
+      fontFamily: "Poppins",
+    },
+    h5: {
+      fontWeight: 600,
+      fontSize: "14px",
+      lineHeight: "44px",
+      fontFamily: "Poppins",
+    },
+    h6: {
+      fontWeight: 600,
+      fontSize: "12px",
       lineHeight: "44px",
       fontFamily: "Poppins",
     },
