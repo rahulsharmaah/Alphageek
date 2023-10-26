@@ -40,20 +40,20 @@ const AudienceInsight = () => {
           />
           <DotsButton>...</DotsButton>
         </Container>
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={2.3} sm={6}>
+        <Grid container spacing={0.3}>
+          <Grid item xs={12} md={2.36} sm={6}>
             <TableComponent heading="Content Activity " data={tableData1} />
           </Grid>
-          <Grid item xs={12} md={2.3} sm={6}>
+          <Grid item xs={12} md={2.36} sm={6}>
             <TableComponent heading="Network Growth " data={tableData2} />
           </Grid>
-          <Grid item xs={12} md={2.3} sm={6}>
+          <Grid item xs={12} md={2.36} sm={6}>
             <TableComponent heading="Backlink Performance" data={tableData3} />
           </Grid>
           <Grid item xs={12} md={2.5} sm={6}>
             <TableComponent heading="Game Interactions" data={tableData4} />
           </Grid>
-          <Grid item xs={12} md={2.3} sm={6}>
+          <Grid item xs={12} md={2.36} sm={6}>
             <TableComponent heading="Top Video" data={tableData5} />
           </Grid>
         </Grid>
