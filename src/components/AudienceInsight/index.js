@@ -40,7 +40,7 @@ const AudienceInsight = () => {
           />
           <DotsButton>...</DotsButton>
         </Container>
-        <Grid container spacing={0.3}>
+        <Grid container spacing={1} overflow={"hidden"}>
           <Grid item xs={12} md={2.36} sm={6}>
             <TableComponent heading="Content Activity " data={tableData1} />
           </Grid>
