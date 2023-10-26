@@ -57,7 +57,7 @@ const Accordion = ({ title, children }) => {
         <>
           <AccordionHeader onClick={toggleAccordion}>
             <div>
-              <Title>{title}</Title>
+              <Typography variant="h1">{title}</Typography>
             </div>
             <Separator />
             <ArrowIcon>{isExpanded ? "▲" : "▼"}</ArrowIcon>
@@ -70,13 +70,13 @@ const Accordion = ({ title, children }) => {
     </Grid>
   );
 };
-const Title = styled(Typography)`
-  color: var(--Darkest, #1c2753);
-  font-family: "Poppins";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-`;
+// const Title = styled(Typography)`
+//   color: var(--Darkest, #1c2753);
+//   font-family: "Poppins";
+//   font-size: 18px;
+//   font-style: normal;
+//   font-weight: 500;
+//   line-height: normal;
+// `;
 
 export default Accordion;

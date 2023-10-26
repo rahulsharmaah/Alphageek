@@ -51,7 +51,7 @@ const CreateTabs = ({ tabLabels, activeTab, setActiveTab }) => {
         value={activeTab}
         onChange={handleChange}
         variant="standard"
-        scrollButtons={false}
+        scrollButtons={true}
         orientation="horizontal"
         aria-label="scrollable prevent tabs example"
       >

@@ -25,7 +25,7 @@ const ChartContainer = () => {
         </StyledCard>
       </Grid>
       <Grid xs={12} md={6}>
-        <Card sx={{padding:"20px"}}>
+        <Card sx={{ padding: "20px" }}>
           <LineChart style={{ height: isMobile ? "100%" : "auto" }} />
         </Card>
       </Grid>
@@ -38,5 +38,6 @@ const StyledCard = styled.div`
     width: auto;
     background: "#F4F7FA";
   }
+
 `;
 export default ChartContainer;

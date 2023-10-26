@@ -15,6 +15,8 @@ import ChannelEngagement from "./pages/Channel Engagement";
 import Gamification from "./pages/Gamification";
 import Dashboard from "./pages/Dashboard";
 import Ecosystem from "./pages/Ecosystem";
+import { ThemeProvider } from "@mui/material";
+import lightTheme from "./components/styles/theme/lightTheme";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,9 +31,9 @@ const router = createBrowserRouter(
   )
 );
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <>
+  <ThemeProvider theme={lightTheme}>
     <RouterProvider router={router} />
-  </>
+  </ThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

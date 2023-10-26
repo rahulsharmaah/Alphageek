@@ -23,10 +23,10 @@ const FanTypeCard = ({
         {/* <------------------Heading section ----------------------------> */}
         <Grid2 container alignItems="space-between">
           <Grid2 item md={6}>
-            <Typography variant="h5">{title} </Typography>
+            <Typography variant="h2">{title} </Typography>
           </Grid2>
           <Grid2 item md={6}>
-            <Typography variant="h5">{title}</Typography>
+            <Typography variant="h1">{title}</Typography>
           </Grid2>
         </Grid2>
         {/* <--------------------------card media-----------------------------------------------> */}
