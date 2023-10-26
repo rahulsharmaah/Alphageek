@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Hidden,
   List,
   ListItem,
   ListItemIcon,
@@ -90,7 +89,7 @@ const Sidebar = () => {
                 <NavLink
                   to={item.link}
                   className={({ isActive }) =>
-                    isActive ? activeClassName : ""
+                    isActive ? activeClassName : "inactive"
                   }
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -121,16 +120,16 @@ const SidebarList = styled(List)`
   opacity: 5;
   display: ${(props) => (props.isMobile ? "none" : "block")};
   /* Style the active SVG image */
-  .active svg {
+   svg {
     fill: ${(props) =>
       props.activeClassName
         ? "grey"
-        : "red"}; /* Change the fill color of the SVG image to red for active items */
+        : "blue"}; /* Change the fill color of the SVG image to red for active items */
   }
 
   /* Style the inactive SVG image */
   svg {
-    fill: ${(props) => (props.activeClassName ? "grey" : "red")};
+    fill: ${(props) => (props.activeClassName ? "red" : "blue")};
   }
 `;
 

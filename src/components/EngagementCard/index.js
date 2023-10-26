@@ -77,7 +77,6 @@ const EngagementCard = ({
               style={{
                 textAlign: "start",
                 color: "var(--Darkest, #1C2753)",
-                fontWeight: "500",
               }}
             >
               <LikeIcon>&#10084;</LikeIcon> {likes} likes
@@ -104,9 +103,8 @@ const EngagementCard = ({
               <Grid container>
                 <Grid item md={8} xs={8}>
                   <Typography
-                    variant="body2"
+                    variant="subtitle2"
                     color="#1C2753"
-                    fontWeight={600}
                     dangerouslySetInnerHTML={{ __html: progressBarsHeading }}
                   >
                     {/* <b>{progressBarsHeading}</b> */}
@@ -116,7 +114,6 @@ const EngagementCard = ({
                   <Typography
                     variant="subtitle2"
                     color="#1C2753"
-                    fontWeight={600}
                   >
                     {progress.percentage}%
                   </Typography>

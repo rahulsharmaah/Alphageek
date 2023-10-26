@@ -82,12 +82,12 @@ const lightTheme = unstable_createMuiStrictModeTheme({
     subtitle1: {
       fontWeight: 600,
       fontSize: "18px",
-      lineHeight: "25px",
+      lineHeight: "20px",
       fontFamily: "Poppins",
     },
     subtitle2: {
       fontWeight: 600,
-      fontSize: "20px",
+      fontSize: "14px",
       lineHeight: "27px",
       fontFamily: "Poppins",
     },
