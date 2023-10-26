@@ -42,7 +42,7 @@ const lightTheme = unstable_createMuiStrictModeTheme({
     h3: {
       fontWeight: 600,
       fontSize: "20px",
-      lineHeight: "44px",
+      lineHeight: "32px",
       fontFamily: "Poppins",
     },
     h4: {
