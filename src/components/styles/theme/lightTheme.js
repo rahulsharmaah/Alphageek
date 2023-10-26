@@ -14,7 +14,7 @@ const lightTheme = unstable_createMuiStrictModeTheme({
     mode: "light",
     colors,
     fonts: {
-      primary: "Poppins",
+      primary: 'Poppins',
     },
   },
   breakpoints: {
@@ -42,9 +42,9 @@ const lightTheme = unstable_createMuiStrictModeTheme({
     body1: {
       fontFamily: "Poppins",
       color: "var(--Darkest, #1C2753)",
-      fontSize: " 18px",
+      fontSize: " 14px",
       fontStyle: "normal",
-      fontWeight: "500",
+      fontWeight: 300,
       lineHeight: "normal",
     },
     body2: {

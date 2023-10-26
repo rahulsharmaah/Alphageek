@@ -6,6 +6,7 @@ import Footer from "../Footer";
 import styled from "styled-components";
 import { Hidden, useMediaQuery, useTheme } from "@mui/material";
 import StickyNavbar from "../StickyNavbar";
+import HamburgerMenu from "../HamburgerMenu";
 
 const LayoutContainer = styled.div`
   display: flex;
@@ -29,13 +30,15 @@ function Layout() {
     <LayoutContainer>
       {isMobile ? <StickyNavbar /> : <Header />}
       <MainContent>
-        <Hidden Down>
+        {isMobile ? (
+          <HamburgerMenu />
+        ) : (
           <aside>
             <SidebarContent>
               <Sidebar />
             </SidebarContent>
           </aside>
-        </Hidden>
+        )}
         <Outlet />
       </MainContent>
       <Footer />
