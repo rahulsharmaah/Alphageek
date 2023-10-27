@@ -33,15 +33,15 @@ const EngagementCard = ({
       <CardContent>
         {/* <------------------Heading section ----------------------------> */}
         <Grid2 container alignItems="center">
-          <Grid2 item md={2}>
-            <Typography variant="h5">{title} </Typography>
+          <Grid2 item md={3}>
+            <Typography variant="h3">{title} </Typography>
           </Grid2>
-          <Grid2 item md={6}>
-            <Typography variant="body" color="textSecondary">
+          <Grid2 item md={5}>
+            <Typography variant="body" color="#1C2753" textAlign={"center"}>
               in partnership with{" "}
             </Typography>
           </Grid2>
-          <Grid2 item md={3}>
+          <Grid2 item md={4}>
             {" "}
             <LogoImage src={logo} alt="Partner Logo" />{" "}
           </Grid2>
@@ -103,20 +103,21 @@ const EngagementCard = ({
               <Grid container>
                 <Grid
                   item
-                  md={8}
-                  xs={8}
+                  md={9}
+                  xs={9}
                   sx={{ display: "flex", justifyContent: "flex-start" }}
                 >
-                  <Typography
-                    variant="subtitle2"
-                    color="#1C2753"
-                    dangerouslySetInnerHTML={{ __html: progressBarsHeading }}
-                  >
-                    {/* <b>{progressBarsHeading}</b> */}
+                  <Typography variant="h4" color="#1C2753" sx={{display: "contents"}}>
+                    <>{progressBarsHeading}</>
+                    <>
+                      <Typography variant={"body2"} fontWeight={500} >
+                        {progress.progressBarsItalicText}
+                      </Typography>
+                    </>
                   </Typography>
                 </Grid>
-                <Grid item md={4} xs={4}>
-                  <Typography variant="subtitle2" color="#1C2753">
+                <Grid item md={3} xs={3}>
+                  <Typography variant="h4" color="#1C2753">
                     {progress.percentage}%
                   </Typography>
                 </Grid>

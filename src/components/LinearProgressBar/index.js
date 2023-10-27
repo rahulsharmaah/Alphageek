@@ -6,8 +6,8 @@ const LinearProgressBar = ({ title, percentage, isLast }) => {
   return (
     <ProgressBarContainer>
       <Containerlabel>
-        <ProgressTitle>{title}</ProgressTitle>
-        <ProgressTitle>{percentage}%</ProgressTitle>
+        <Typography variant="h3">{title}</Typography>
+        <Typography variant="h3">{percentage}%</Typography>
       </Containerlabel>
       <ProgressBarInfo>
         <ProgressBarStyled
@@ -44,11 +44,11 @@ const ProgressBarStyled = styled(LinearProgress)`
   }
 `;
 
-const ProgressTitle = styled(Typography)`
-  color: #1c2753;
-  text-align: center;
-  font-weight: 600;
-`;
+// const ProgressTitle = styled(Typography)`
+//   color: #1c2753;
+//   text-align: center;
+//   font-weight: 600;
+// `;
 
 const ProgressBarInfo = styled.div`
   display: flex;

@@ -122,7 +122,7 @@ const Sidebar = () => {
 
 const SidebarList = styled(List)`
   position: relative !important;
-  z-index: 9999 !important;
+  z-index: 9 !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   width: ${(props) => (props.isTextVisible ? "14vw" : "4vw")};
   height: 100vh;
