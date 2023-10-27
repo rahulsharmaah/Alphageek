@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import {
   List,
   ListItem,
-  ListItemIcon,
-  ListItemText,
+  // ListItemIcon,
+  // ListItemText,
   Typography,
   useMediaQuery,
   useTheme,
@@ -17,9 +17,9 @@ import SettingLogo from "../icons/SettingLogo";
 import styled from "styled-components";
 import HamburgerMenu from "../HamburgerMenu";
 import ChannelEngagementLogo from "../icons/ChannelEngagementLogo";
-import { event } from "d3";
+// import { event÷ } from "d3";
 
-const activeClassName = "activeListItem";
+// const activeClassName = "activeListItem";
 
 const Sidebar = () => {
   const [isTextVisible, setIsTextVisible] = useState(false);
@@ -92,7 +92,15 @@ const Sidebar = () => {
                 <Wrapper active={item.link === window.location.pathname}>
                   {isTextVisible ? (
                     <>
-                      <IconWrapper sx={{width:"50%" ,justifyContent:"start", marginRight:"32px !Important"}}>{item.image}</IconWrapper>
+                      <IconWrapper
+                        sx={{
+                          width: "50%",
+                          justifyContent: "start",
+                          marginRight: "32px !Important",
+                        }}
+                      >
+                        {item.image}
+                      </IconWrapper>
                       <TextWrapper>
                         <Typography variant="h4" display="flex">
                           {item.text}
