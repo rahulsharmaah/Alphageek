@@ -1,12 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../Sidebar";
-import Header from "../Header";
+// import Header from "../Header";
 import Footer from "../Footer";
 import styled from "styled-components";
-import { Hidden, useMediaQuery, useTheme } from "@mui/material";
-import StickyNavbar from "../StickyNavbar";
-import HamburgerMenu from "../HamburgerMenu";
+// import { Hidden, useMediaQuery, useTheme } from "@mui/material";
+// import StickyNavbar from "../StickyNavbar";
+// import HamburgerMenu from "../HamburgerMenu";
+import NewstickyNav from "../StickyNavbar/NewstickyNav";
 
 const LayoutContainer = styled.div`
   display: flex;
@@ -24,21 +25,17 @@ const SidebarContent = styled.div`
 `;
 
 function Layout() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  // const theme = useTheme();
+  // const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <LayoutContainer>
-      {isMobile ? <StickyNavbar /> : <Header />}
+      <NewstickyNav />
       <MainContent>
-        {isMobile ? (
-          <HamburgerMenu />
-        ) : (
-          <aside>
-            <SidebarContent>
-              <Sidebar />
-            </SidebarContent>
-          </aside>
-        )}
+        <aside sx={{ display: { xs: "none" } }}>
+          <SidebarContent>
+            <Sidebar />
+          </SidebarContent>
+        </aside>
         <Outlet />
       </MainContent>
       <Footer />

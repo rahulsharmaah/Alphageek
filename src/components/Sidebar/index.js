@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import {
   List,
   ListItem,
+  ListItemIcon,
+  ListItemText,
   // ListItemIcon,
   // ListItemText,
   Typography,
-  useMediaQuery,
-  useTheme,
+  // useMediaQuery,
+  // useTheme,
 } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import ChartFill from "../icons/ChartFIll";
@@ -15,7 +17,7 @@ import SupportFill from "../icons/SupportFill";
 import LightningFill from "../icons/LightningFill";
 import SettingLogo from "../icons/SettingLogo";
 import styled from "styled-components";
-import HamburgerMenu from "../HamburgerMenu";
+// import HamburgerMenu from "../HamburgerMenu";
 import ChannelEngagementLogo from "../icons/ChannelEngagementLogo";
 // import { event÷ } from "d3";
 
@@ -26,8 +28,8 @@ const Sidebar = () => {
 
   const handleClick = () => setIsTextVisible(!isTextVisible);
 
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  // const theme = useTheme();
+  // const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const items = [
     {
       id: 1,
@@ -69,61 +71,52 @@ const Sidebar = () => {
 
   return (
     <>
-      {isMobile ? (
-        <HamburgerMenu />
-      ) : (
-        <SidebarList isTextVisible={isTextVisible}>
-          <TopToggle>
-            <ToggleButton onClick={handleClick}>&#9776;</ToggleButton>
-          </TopToggle>
-          {items.map((item) => (
-            <NavLink
-              to={item.link}
-              key={item.id}
-              style={({ isActive }) => {
-                return {
-                  fontWeight: isActive ? "bold" : "",
-                  color: isActive ? "#fff" : "var(--Gray, #7D909B)",
-                  backgroundColor: isActive ? "var(--Blue, #0060FC)" : "#fff",
-                  svg: { fill: isActive ? "#fff" : "red" },
-                };
-              }}
-            >
-              <ListItem>
-                <Wrapper active={item.link === window.location.pathname}>
-                  {isTextVisible ? (
-                    <>
-                      <IconWrapper
-                        sx={{
-                          width: "50%",
-                          justifyContent: "start",
-                          marginRight: "32px !Important",
-                        }}
-                      >
-                        {item.image}
-                      </IconWrapper>
-                      <TextWrapper>
-                        <Typography variant="h4" display="flex">
-                          {item.text}
-                        </Typography>
-                      </TextWrapper>
-                    </>
-                  ) : (
-                    <IconWrapper>{item.image}</IconWrapper>
-                  )}
-                </Wrapper>
-              </ListItem>
-            </NavLink>
-          ))}
-        </SidebarList>
-      )}
+      <SidebarList
+        isTextVisible={isTextVisible}
+        sx={{ display: { xs: "none",md:"flex" } }}
+      >
+        <TopToggle>
+          <ToggleButton onClick={handleClick}>&#9776;</ToggleButton>
+        </TopToggle>
+        {items.map((item) => (
+          <NavLink
+            to={item.link}
+            key={item.id}
+            style={({ isActive }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isActive ? "#fff" : "var(--Gray, #7D909B)",
+                backgroundColor: isActive ? "var(--Blue, #0060FC)" : "#fff",
+                svg: { fill: isActive ? "#fff" : "red" },
+              };
+            }}
+          >
+            <ListItem>
+              <>
+                {isTextVisible ? (
+                  <>
+                    <ListItemIcon>{item.image}</ListItemIcon>
+                    <ListItemText>
+                      <Typography variant="h4" display="flex">
+                        {item.text}
+                      </Typography>
+                    </ListItemText>
+                  </>
+                ) : (
+                  <IconWrapper>{item.image}</IconWrapper>
+                )}
+              </>
+            </ListItem>
+          </NavLink>
+        ))}
+      </SidebarList>
     </>
   );
 };
 
 const SidebarList = styled(List)`
   position: relative !important;
-  z-index: 9 !important;
+  z-index: 129 !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   width: ${(props) => (props.isTextVisible ? "14vw" : "4.2vw")};
   height: 100vh;
@@ -132,6 +125,7 @@ const SidebarList = styled(List)`
   align-items: center;
   justify-content: flex-start;
   text-align: center;
+  background-color: #fff;
 `;
 
 const TopToggle = styled.div`

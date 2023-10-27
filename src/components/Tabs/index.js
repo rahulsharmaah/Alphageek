@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { Grid } from "@mui/material";
 
 const StyledTabs = styled(Tabs)`
-  padding-left: 1rem;
   border-radius: 20px;
 
   .MuiTab-root {
