@@ -33,7 +33,7 @@ const EngagementCard = ({
       <CardContent>
         {/* <------------------Heading section ----------------------------> */}
         <Grid2 container alignItems="center">
-          <Grid2 item md={3}  textAlign={"start"}>
+          <Grid2 item md={3}  textAlign={"start"} px={1}>
             <Typography variant="h3">{title} </Typography>
           </Grid2>
           <Grid2 item md={5} margin={"2px auto"}>
@@ -41,7 +41,7 @@ const EngagementCard = ({
               in partnership with{" "}
             </Typography>
           </Grid2>
-          <Grid2 item md={4}>
+          <Grid2 item md={3}>
             {" "}
             <LogoImage src={logo} alt="Partner Logo" />{" "}
           </Grid2>
