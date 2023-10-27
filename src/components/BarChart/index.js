@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import React from "react";
 import { Bar } from "react-chartjs-2";
 
@@ -22,7 +23,7 @@ const options = {
       position: "top",
     },
     title: {
-      display: true,
+      display: false,
       text: "Engagement Metrics",
     },
   },
@@ -32,7 +33,7 @@ const data = {
   datasets: [
     {
       label: "Videoes",
-      data: [5000, 15000, 20000],
+      data: [5, 15, 20, 25],
       backgroundColor: "#00ABA9", // Darker shade of red
       borderWidth: 1,
       barPercentage: 0.8,
@@ -41,7 +42,7 @@ const data = {
     },
     {
       label: "Games",
-      data: [8000, 12000, 18000],
+      data: [22, 15, 21, 25],
       backgroundColor: "#5DDDEF", // Darker shade of blue
       borderWidth: 1,
       barPercentage: 0.8,
@@ -50,7 +51,7 @@ const data = {
     },
     {
       label: "Stories",
-      data: [12000, 18000, 22000],
+      data: [13, 17, 20, 30],
       backgroundColor: "#F09609", // Darker shade of orange
       borderWidth: 1,
       barPercentage: 0.8,
@@ -59,7 +60,7 @@ const data = {
     },
     {
       label: "Quizes",
-      data: [7000, 17000, 21000],
+      data: [18, 15, 24, 25],
       backgroundColor: "#5D5FEF", // Darker shade of teal
       borderWidth: 1,
       barPercentage: 0.8,
@@ -72,6 +73,9 @@ const data = {
 const BarChart = () => {
   return (
     <>
+      <Typography variant="h3" gutterBottom>
+        {options.plugins.title.text}
+      </Typography>
       <Bar data={data} options={options} />
     </>
   );

@@ -10,6 +10,9 @@ export const colors = {
   grey: "#F5F5F5",
 };
 const lightTheme = unstable_createMuiStrictModeTheme({
+  root: {
+    backgroundColor: "#FAFAFA",
+  },
   palette: {
     mode: "light",
     colors,
@@ -50,7 +53,7 @@ const lightTheme = unstable_createMuiStrictModeTheme({
       fontSize: "16px",
       lineHeight: "24px",
       fontFamily: "Poppins",
-      letterSpacing:"0.44px"
+      letterSpacing: "0.44px",
     },
     h5: {
       fontWeight: 600,

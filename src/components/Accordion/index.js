@@ -55,7 +55,7 @@ const Accordion = ({ title, children }) => {
         <>
           <AccordionHeader onClick={toggleAccordion}>
             <div>
-              <Typography variant="subtitle2" fontWeight={500}>{title}</Typography>
+              <Typography variant="h3" fontWeight={500}>{title}</Typography>
             </div>
             <Separator />
             <ArrowIcon>{isExpanded ? "▲" : "▼"}</ArrowIcon>
