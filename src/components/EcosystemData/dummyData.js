@@ -1,6 +1,7 @@
 const dummyData = [
   {
-    title: "Mobile",
+    title: "Core Fans",
+    partner: "75,748",
     logo: "microsoft.png",
     image: "image11.svg",
     tagline: "EasyCredit 2023 League Preview ",
@@ -22,8 +23,8 @@ const dummyData = [
     ],
   },
   {
-    title: "Mobile",
-    partner: "Microsoft",
+    title: "Next Fans",
+    partner: "40,347",
     logo: "microsoft.png",
     image: `${process.env.PUBLIC_URL}/image11.svg`,
     tagline: "EasyCredit 2023 League Preview ",
@@ -45,8 +46,8 @@ const dummyData = [
     ],
   },
   {
-    title: "Mobile",
-    partner: "Microsoft",
+    title: "Orignal Fans",
+    partner: "75,748",
     logo: "microsoft.png",
     image: `${process.env.PUBLIC_URL}/image11.svg`,
     tagline: "EasyCredit 2023 League Preview ",

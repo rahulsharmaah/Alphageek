@@ -6,11 +6,7 @@ import { Line } from "react-chartjs-2";
 import { data, options } from "./lineChartData";
 import LinearProgressBar from "../LinearProgressBar";
 // import { styled as muiStyled } from "@mui/material";
-const FanTypeCard = ({
-  title,
-  tagline,
-  progressBars,
-}) => {
+const FanTypeCard = ({ title, tagline, progressBars,partner }) => {
   return (
     <CardContainer
       sx={{
@@ -23,10 +19,14 @@ const FanTypeCard = ({
         {/* <------------------Heading section ----------------------------> */}
         <Grid2 container alignItems="space-between">
           <Grid2 item md={6}>
-            <Typography variant="h2">{title} </Typography>
+            <Typography variant="h3" textAlign={"start"}>
+              {title}{" "}
+            </Typography>
           </Grid2>
           <Grid2 item md={6}>
-            <Typography variant="h1">{title}</Typography>
+            <Typography variant="h2" textAlign={"end"}>
+              {partner}
+            </Typography>
           </Grid2>
         </Grid2>
         {/* <--------------------------card media-----------------------------------------------> */}
@@ -61,7 +61,7 @@ const FanTypeCard = ({
         </ProgressBarContainer>
         {/* <------------------Button-----------------> */}
         <ImageSection>
-        <img src={"exp-24.png"} alt="icon" style={{ marginRight: "10px" }} />
+          <img src={"exp-24.png"} alt="icon" style={{ marginRight: "10px" }} />
         </ImageSection>
       </CardContent>
     </CardContainer>
@@ -88,10 +88,10 @@ const CardMedia = styled.div`
     background: "#F4F7FA";
   }
 `;
-const ImageSection =styled.div`
-    height: auto;
-    align-items: center;
-    justify-content: center;
-    width:100%;
+const ImageSection = styled.div`
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 `;
 export default FanTypeCard;
