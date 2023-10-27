@@ -124,7 +124,7 @@ const SidebarList = styled(List)`
   position: relative !important;
   z-index: 9 !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  width: ${(props) => (props.isTextVisible ? "14vw" : "6vw")};
+  width: ${(props) => (props.isTextVisible ? "14vw" : "5vw")};
   height: 100vh;
   display: ${(props) => (props.isMobile ? "none" : "flex")};
   flex-direction: column;
