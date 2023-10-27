@@ -33,23 +33,24 @@ const lightTheme = unstable_createMuiStrictModeTheme({
       lineHeight: "44px",
       fontFamily: "Poppins",
     },
-    h2: {
+    h3: {
       fontWeight: 600,
       fontSize: "18px",
       lineHeight: "44px",
       fontFamily: "Poppins",
     },
-    h3: {
+    h2: {
       fontWeight: 600,
       fontSize: "20px",
       lineHeight: "32px",
       fontFamily: "Poppins",
     },
     h4: {
-      fontWeight: 600,
-      fontSize: "20px",
-      lineHeight: "44px",
+      fontWeight: 500,
+      fontSize: "16px",
+      lineHeight: "24px",
       fontFamily: "Poppins",
+      letterSpacing:"0.44px"
     },
     h5: {
       fontWeight: 600,

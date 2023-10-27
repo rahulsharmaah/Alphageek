@@ -17,10 +17,12 @@ import Dashboard from "./pages/Dashboard";
 import Ecosystem from "./pages/Ecosystem";
 import { ThemeProvider } from "@mui/material";
 import lightTheme from "./components/styles/theme/lightTheme";
+import ErrorPage from "./error-page";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
+      <Route path="*" element={<ErrorPage />} />
       <Route index element={<Dashboard />} />
       <Route path="/channel-engagement" element={<ChannelEngagement />} />
       <Route path="/ecosystem" element={<Ecosystem />} />

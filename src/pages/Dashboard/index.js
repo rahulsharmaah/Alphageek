@@ -16,7 +16,7 @@ const Dashboard = () => {
             activeTab={activeTab}
             setActiveTab={setActiveTab}
           />
-        <Separator />
+          <Separator />
         </Grid>
         <Grid item xs={12}>
           {activeTab === 0 && <DashboardData />}
