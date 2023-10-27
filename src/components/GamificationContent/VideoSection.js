@@ -23,11 +23,11 @@ const VideoSection = () => {
           <Grid item md={8} xs={12}>
             <ProgressBarContainer>
               <Containerlabel>
-                <ProgressTitle>{progress.title}</ProgressTitle>
-                <ProgressTitle>
+                <Typography variant="h3">{progress.title}</Typography>
+                <Typography variant="h3">
                   {progress.percentage}
                   {"%"}
-                </ProgressTitle>
+                </Typography>
               </Containerlabel>
               <ProgressBarInfo>
                 <ProgressBar
@@ -62,11 +62,11 @@ const Containerlabel = styled.div`
   justify-content: space-between;
   width: 80%;
 `;
-const ProgressTitle = styled(Typography)`
-  color: #1c2753;
-  text-align: start !important;
-  font-weight: 600;
-`;
+// const ProgressTitle = styled(Typography)`
+//   color: #1c2753;
+//   text-align: start !important;
+//   font-weight: 600;
+// `;
 
 const ProgressBarInfo = styled.div`
   display: flex;
