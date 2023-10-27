@@ -8,6 +8,13 @@ const options = {
     title: {
       display: true,
       text: "Engagement Metrics",
+      font: {
+        color: "#00495F",
+        textAlign: "center",
+        family: "Roboto",
+        size: "18px",
+        weight: 500,
+      }
     },
   },
   layout: {
@@ -21,6 +28,10 @@ const options = {
   scales: {
     x: {
       beginAtZero: true,
+      ticks:{
+        color: "#007C84",
+        fontWeight:500,
+      }
     },
     y: {
       beginAtZero: true,
@@ -28,6 +39,7 @@ const options = {
         callback: function (value) {
           return `${value}k`;
         },
+        color: "#007C84",
       },
     },
   },
@@ -37,8 +49,8 @@ const data = {
   labels: ["September", "October", "November"],
   datasets: [
     {
-      label: "Website",
-      data: [5000, 2000, 20000],
+      label: "Orignal Fans",
+      data: [5, 18, 25,23,45],
       fill: false,
       borderColor: "#007C84", // Green
       pointBackgroundColor: "#FF0097", // Match legend color

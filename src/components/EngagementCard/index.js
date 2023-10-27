@@ -36,7 +36,7 @@ const EngagementCard = ({
           <Grid2 item md={3}  textAlign={"start"}>
             <Typography variant="h3">{title} </Typography>
           </Grid2>
-          <Grid2 item md={5} margin={"0 auto"}>
+          <Grid2 item md={5} margin={"2px auto"}>
             <Typography variant="body" color="#1C2753" textAlign={"start"}>
               in partnership with{" "}
             </Typography>
