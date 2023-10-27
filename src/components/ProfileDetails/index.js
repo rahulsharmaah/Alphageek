@@ -124,7 +124,7 @@ const FormGroup = styled.div`
 const Label = styled.label`
   color: #1c2753;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 600;
   font-family: "Poppins";
 `;
 
