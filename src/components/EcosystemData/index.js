@@ -6,20 +6,20 @@ import EcosystemTables from "./EcosystemTables";
 const EcosystemData = () => {
   const dummyData = [
     {
-      title: "Cell 1",
-      subtitle: "Subtitle 1",
+      title: "Avg Time Spent",
+      subtitle: "2:30",
     },
     {
-      title: "Cell 2",
-      subtitle: "Subtitle 2",
+      title: "Unique Content",
+      subtitle: "500",
     },
     {
-      title: "Cell 3",
-      subtitle: "Subtitle 3",
+      title: "Total Engagements",
+      subtitle: "40,000",
     },
     {
-      title: "Cell 4",
-      subtitle: "Subtitle 4",
+      title: "Highest ER",
+      subtitle: "65%",
     },
   ];
 

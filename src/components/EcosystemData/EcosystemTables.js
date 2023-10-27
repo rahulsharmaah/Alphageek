@@ -30,12 +30,12 @@ const EcosystemTables = ({ tableData }) => {
                 const data = tableData[rowIndex * 2 + colIndex];
                 return (
                   <StyledTableCell key={colIndex}>
-                    <StyledTypography variant="subtitle1">
+                    <Typography variant="h4" fontWeight={700} color={"#575757"} textAlign={"center"}>
                       {data.title}
-                    </StyledTypography>
-                    <StyledTypography variant="h5" fontWeight={700}>
+                    </Typography>
+                    <Typography variant="h2" fontWeight={700} color={"#575757"} textAlign={"center"}>
                       {data.subtitle}
-                    </StyledTypography>
+                    </Typography>
                   </StyledTableCell>
                 );
               })}
@@ -47,15 +47,15 @@ const EcosystemTables = ({ tableData }) => {
   );
 };
 
-const StyledTypography = styled(Typography)`
-  color: var(--Dark, #575757);
-  text-align: center;
-  font-family: Poppins;
-  font-size: ${(props) => (props.variant === "subtitle1" ? "16px" : "24px")};
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.44px;
-`;
+// const StyledTypography = styled(Typography)`
+//   color: var(--Dark, #575757);
+//   text-align: center;
+//   font-family: Poppins;
+//   font-size: ${(props) => (props.variant === "subtitle1" ? "16px" : "24px")};
+//   font-style: normal;
+//   font-weight: 700;
+//   line-height: normal;
+//   letter-spacing: 0.44px;
+// `;
 
 export default EcosystemTables;

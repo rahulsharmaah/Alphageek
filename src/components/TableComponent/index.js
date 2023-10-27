@@ -18,6 +18,7 @@ const Container = styled(TableContainer)`
 
 const CustomTable = styled(Table)`
   border-radius: 5px 5px 0px 0px !important;
+  text-align: center;
 `;
 
 const TableComponent = ({ heading, data, needHeading = true }) => {

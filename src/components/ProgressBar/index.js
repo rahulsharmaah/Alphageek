@@ -23,7 +23,6 @@ const ProgressFiller = styled.div`
     width: ${(props) => `${props.percentage}%`};
     height: 100%;
     background: linear-gradient(90deg, #27b1fe 0.46%, #1dc560 118.27%);
-
     position: absolute;
     border-top-left-radius: 38px;
     border-bottom-left-radius: 38px;

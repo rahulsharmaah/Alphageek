@@ -40,20 +40,26 @@ const AudienceInsight = () => {
           />
           <DotsButton>...</DotsButton>
         </Container>
-        <Grid container spacing={1} overflowX={"hidden"}>
-          <Grid item xs={12} md={2.36} sm={6}>
+        <Grid
+          container
+          spacing={8}
+          overflowX={"hidden"}
+          justifyContent={"flex-start"}
+          textAlign={"center"}
+        >
+          <Grid item xs={12} md={4} sm={6} xl={2.4}>
             <TableComponent heading="Content Activity " data={tableData1} />
           </Grid>
-          <Grid item xs={12} md={2.36} sm={6}>
+          <Grid item xs={12} md={4} sm={6} xl={2.4}>
             <TableComponent heading="Network Growth " data={tableData2} />
           </Grid>
-          <Grid item xs={12} md={2.36} sm={6}>
+          <Grid item xs={12} md={4} sm={6} xl={2.4}>
             <TableComponent heading="Backlink Performance" data={tableData3} />
           </Grid>
-          <Grid item xs={12} md={2.4} sm={6}>
+          <Grid item xs={12} md={4} sm={6} xl={2.4}>
             <TableComponent heading="Game Interactions" data={tableData4} />
           </Grid>
-          <Grid item xs={12} md={2.36} sm={6}>
+          <Grid item xs={12} md={4} sm={6} xl={2.4}>
             <TableComponent heading="Top Video" data={tableData5} />
           </Grid>
         </Grid>

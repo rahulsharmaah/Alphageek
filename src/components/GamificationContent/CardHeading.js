@@ -6,8 +6,8 @@ const CardHeading = ({ title, width }) => {
   return (
     <StyledButton width={width}>
       {" "}
-      <Typography variant="h5" color="#fff" textAlign={"center"} >
-        {title}{" "}
+      <Typography variant="h2" color="#fff" textAlign={"center"}>
+        {title}
       </Typography>
     </StyledButton>
   );
