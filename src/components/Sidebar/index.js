@@ -73,9 +73,15 @@ const Sidebar = () => {
     <>
       <SidebarList
         isTextVisible={isTextVisible}
-        sx={{ display: { xs: "none",md:"flex" } }}
+        sx={{ display: { xs: "none", md: "flex" } }}
       >
-        <TopToggle>
+        <TopToggle
+          sx={
+            isTextVisible
+              ? { justifyContent: "center" }
+              : { justifyContent: "start" }
+          }
+        >
           <ToggleButton onClick={handleClick}>&#9776;</ToggleButton>
         </TopToggle>
         {items.map((item) => (
@@ -97,7 +103,7 @@ const Sidebar = () => {
                   <>
                     <ListItemIcon>{item.image}</ListItemIcon>
                     <ListItemText>
-                      <Typography variant="h4" display="flex">
+                      <Typography variant="h4" textAlign={"start"}>
                         {item.text}
                       </Typography>
                     </ListItemText>
@@ -115,17 +121,24 @@ const Sidebar = () => {
 };
 
 const SidebarList = styled(List)`
-  position: relative !important;
-  z-index: 129 !important;
+  position: sticky !important;
+  z-index: 9 !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  width: ${(props) => (props.isTextVisible ? "14vw" : "4.2vw")};
+  width: "auto";
   height: 100vh;
+  width: auto;
   display: ${(props) => (props.isMobile ? "none" : "flex")};
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   text-align: center;
   background-color: #fff;
+  .css-h3u67z-MuiList-root {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+  }
 `;
 
 const TopToggle = styled.div`
@@ -142,20 +155,20 @@ const ToggleButton = styled.button`
   cursor: pointer;
 `;
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: space-around;
-  width: 100%;
-  margin: 0 auto;
-`;
+// const Wrapper = styled.div`
+//   display: flex;
+//   align-items: space-around;
+//   width: 100%;
+//   margin: 0 auto;
+// `;
 const IconWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 `;
 
-const TextWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+// const TextWrapper = styled.div`
+//   display: flex;
+//   justify-content: center;
+// `;
 
 export default Sidebar;

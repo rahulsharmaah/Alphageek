@@ -16,7 +16,7 @@ const ChannelEngagementLogo = () => {
         height="4"
         rx="2"
         transform="rotate(90 18 9)"
-        fill="#7D909B"
+        fill="#ffff"
         stroke="#7D909B"
         stroke-width="2"
       />

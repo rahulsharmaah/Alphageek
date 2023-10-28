@@ -1,5 +1,4 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -8,7 +7,6 @@ import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
@@ -21,7 +19,7 @@ import DribbleLogo from "../icons/DribbleLogo";
 import SettingLogo from "../icons/SettingLogo";
 import LightningFill from "../icons/LightningFill";
 import SupportFill from "../icons/SupportFill";
-import { Grid, ListItemIcon } from "@mui/material";
+import { Grid, ListItemIcon, Typography } from "@mui/material";
 import styled from "styled-components";
 import { NotificationIcon } from "../icons/NotificationIcon";
 import InputBase from "@mui/material/InputBase";
@@ -81,16 +79,28 @@ function NewstickyNav(props) {
       </Typography> */}
       <img src="alphageek-frame.png" alt="logo" />
       <Divider />
-      <List>
+      <List sx={{ ".active": { backgroundColor: "red" } }}>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <NavLink to={item.link}>
-                <ListItemIcon>{item.image}</ListItemIcon>
-                <ListItemText primary={item.text} />
-              </NavLink>
-            </ListItemButton>
-          </ListItem>
+          <NavLink
+            to={item.link}
+            key={item.id}
+            style={({ isActive }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isActive ? "blue" : "var(--black)",
+                backgroundColor: isActive ? "var(--Blue, #0060FC)" : "#fff",
+              };
+            }}
+          >
+            <ListItem key={item}>
+              <ListItemIcon>{item.image}</ListItemIcon>
+              <ListItemText>
+                <Typography variant="h4" textAlign={"start"}>
+                  {item.text}
+                </Typography>
+              </ListItemText>
+            </ListItem>
+          </NavLink>
         ))}
       </List>
     </Box>
@@ -118,7 +128,7 @@ function NewstickyNav(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: "none" } }}
+            sx={{ mr: 2, display: { md: "none", sm: "flex" } }}
           >
             <MenuIcon />
           </IconButton>
@@ -193,7 +203,7 @@ function NewstickyNav(props) {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { xs: "block", sm: "block",md:"none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
@@ -207,13 +217,6 @@ function NewstickyNav(props) {
   );
 }
 
-NewstickyNav.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
 const NotificationIconWrapper = styled.div`
   display: flex;
   align-items: center;

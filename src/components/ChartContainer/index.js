@@ -24,12 +24,12 @@ const ChartContainer = () => {
             options={chartOptions}
             usePlugins={usePlugins}
           />
-          {console.log(chartOptions, "ch")}
-          <h1>{JSON.stringify(chartData.datasets[0].lablel, 2)}</h1>
         </StyledCard>
       </Grid>
       <Grid xs={12} md={6} px={1} py={1}>
-        <StyledCard>
+        <StyledCard
+          sx={{ canvas: { height: { xs: "900px !important", md: "500px" } } }}
+        >
           <LineChart />
         </StyledCard>
       </Grid>

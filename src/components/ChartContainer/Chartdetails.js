@@ -19,6 +19,7 @@ const chartData = {
     },
     {
       label: "Website",
+      enabled:true,
       data: [{ x: 12, y: 13, r: 78 }],
       borderColor: "1 px solid black",
       hoverBackgroundColor: "rgba(0, 171, 169, 0.67)",
@@ -76,7 +77,11 @@ const chartOptions = {
       //
     },
   },
-  responsive: true,
+  responsive: {
+    height: 800,
+    width: 800,
+    maintainAspectRatio: true,
+  },
   maintainAspectRatio: true,
 };
 

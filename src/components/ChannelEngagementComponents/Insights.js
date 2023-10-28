@@ -114,9 +114,11 @@ const Insights = () => {
       </Grid2>
       <Modal open={isModalOpen} onClose={handleCloseModal}>
         <ModalContent>
-          <CloseButton onClick={handleCloseModal}>
-            <CloseIcon />
-          </CloseButton>
+          <Box>
+            <CloseButton onClick={handleCloseModal}>
+              <CloseIcon />
+            </CloseButton>
+          </Box>
           <img src="word-count.png" alt="Word count" />
         </ModalContent>
       </Modal>
@@ -140,6 +142,10 @@ const CardData = styled.div`
   line-height: normal;
   text-align: justify;
   padding: 18px 18px;
+  img {
+    height: 100%;
+    width: auto;
+  }
 `;
 
 const Dots = styled.div`
@@ -152,7 +158,7 @@ const Dots = styled.div`
 
 const ModalContent = styled(Box)`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #fff;

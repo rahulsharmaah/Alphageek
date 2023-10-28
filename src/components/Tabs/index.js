@@ -45,14 +45,13 @@ const CreateTabs = ({ tabLabels, activeTab, setActiveTab }) => {
   return (
     <>
     <Grid container ml={4}>
-    <Grid item md={8} xs={12}>
+    <Grid item md={12} xs={12}>
       <StyledTabs
         value={activeTab}
         onChange={handleChange}
         variant="standard"
-        scrollButtons={true}
+        scrollButtons={false}
         orientation="horizontal"
-        aria-label="scrollable prevent tabs example"
       >
         {tabLabels.map((label, index) => (
           <Tab key={index} label={label} />
