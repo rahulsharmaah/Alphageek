@@ -50,7 +50,7 @@ const Accordion = ({ title, children }) => {
   };
 
   return (
-    <Grid container mt={1}>
+    <Grid container mt={1} px={2}>
       <Grid item xs={12} padding={"0"}>
         <>
           <AccordionHeader onClick={toggleAccordion}>

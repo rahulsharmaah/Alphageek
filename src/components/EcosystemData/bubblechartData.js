@@ -1,4 +1,5 @@
 const chartData = {
+  labels: ["September", "October", "November"],
   datasets: [
     {
       label: "Newsletter",
@@ -9,7 +10,7 @@ const chartData = {
           type: "number",
           x: 9.8101,
           y: 13.012,
-          r:60,
+          r: 60,
           content: "30%",
           fontSize: 42, // Change the font size here
           backgroundColor: "rgba(255, 0, 0, 0.5)", // Background color
@@ -19,7 +20,7 @@ const chartData = {
     },
     {
       label: "Website",
-      enabled:true,
+      enabled: true,
       data: [{ x: 12, y: 13, r: 78 }],
       borderColor: "1 px solid black",
       hoverBackgroundColor: "rgba(0, 171, 169, 0.67)",
@@ -45,22 +46,23 @@ const chartData = {
 const chartOptions = {
   scales: {
     x: {
-      display: false,
+      display: true,
     },
     y: {
-      display: false,
+      display: true,
     },
   },
   plugins: {
     legend: {
       display: true,
-      position: "left",
+      position: "top",
       title: {
         FontFace: "Poppins",
         fontWeight: "500",
-        color: "blue !Important", // Change the color here
+        color: "blue !Important",
         fontSize: 16,
-        borderWidth:5, // Change the font size here
+        borderWidth: 5,
+        margin: 4,
       },
     },
     title: {

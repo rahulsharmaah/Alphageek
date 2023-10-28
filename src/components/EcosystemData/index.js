@@ -2,6 +2,9 @@ import { Grid } from "@mui/material";
 import React from "react";
 import Accordion from "../Accordion";
 import EcosystemTables from "./EcosystemTables";
+import CustomBubbleChart from "../CustomBubbleChart";
+import { chartData,chartOptions, usePlugins } from "./bubblechartData";
+import styled from "styled-components";
 
 const EcosystemData = () => {
   const dummyData = [
@@ -61,14 +64,13 @@ const EcosystemData = () => {
             </Grid>
             <Grid item xs={12} md={8}>
               <Accordion title={"Content Shares"}>
-                <div>
-                  <img
-                    src={"image11.svg"}
-                    alt="img"
-                    height={"100%"}
-                    width={"auto"}
+                <StyledCard>
+                  <CustomBubbleChart
+                    data={chartData}
+                    options={chartOptions}
+                    plugins={usePlugins}
                   />
-                </div>{" "}
+                </StyledCard>
               </Accordion>
             </Grid>
           </Grid>
@@ -78,4 +80,17 @@ const EcosystemData = () => {
   );
 };
 
+const StyledCard = styled.div`
+  border-radius: 20px;
+  border: 1px solid #ebebeb;
+  background: var(--White, #fff);
+  margin-top: 20px;
+  padding: 2rem;
+  canvas {
+    height: 800px;
+    width: 100% !important;
+    background: "#F4F7FA";
+    height: ${(props) => (props.isMobile ? "100%" : "400px")};
+  }
+`;
 export default EcosystemData;

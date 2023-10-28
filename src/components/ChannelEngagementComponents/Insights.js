@@ -4,23 +4,15 @@ import {
   List,
   ListItem,
   Typography,
-  Button,
-  Modal,
-  Box,
-  IconButton,
 } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import styled from "styled-components";
 import CustomBubbleChart from "../CustomBubbleChart";
 import { chartData, chartOptions, usePlugins } from "./ChartDetails";
-import CloseIcon from "@mui/icons-material/Close"; // Import the CloseIcon
-
+import CustomModal from "../CustomModal";
+import ModalContent from "./ModalContent";
 const Insights = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
@@ -104,15 +96,29 @@ const Insights = () => {
                 <Typography variant="h3">Engagement Metrics</Typography>
               </Grid2>
               <CardData>
-                <Button onClick={handleOpenModal}>
-                  <img src="word-count.png" alt="Word count" />
-                </Button>
+                <>
+                  <CustomModal
+                    // ... Pass any props you want to the CustomModal component
+                    isOpen={isModalOpen}
+                    close={handleCloseModal}
+                    imageSrc="word-count.png"
+                    modalContent={
+                      <ModalContent
+                        imageSrc={"word-count.png"}
+                        altText={"Word count"}
+                        close={handleCloseModal}
+                      />
+                    }
+                    altText="Word count"
+                  />
+                </>
               </CardData>
             </CardContainer>
           </Grid2>
         </Grid2>
       </Grid2>
-      <Modal open={isModalOpen} onClose={handleCloseModal}>
+
+      {/* <Modal open={isModalOpen} onClose={handleCloseModal}>
         <ModalContent>
           <Box>
             <CloseButton onClick={handleCloseModal}>
@@ -121,7 +127,7 @@ const Insights = () => {
           </Box>
           <img src="word-count.png" alt="Word count" />
         </ModalContent>
-      </Modal>
+      </Modal> */}
     </>
   );
 };
@@ -156,26 +162,26 @@ const Dots = styled.div`
   stroke: #d5dee3;
 `;
 
-const ModalContent = styled(Box)`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  min-height: "100vh";
-  width: "50%";
+// const ModalContentData = styled(Box)`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: #fff;
+//   min-height: "100vh";
+//   width: "50%";
 
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-`;
+//   img {
+//     max-width: 100%;
+//     max-height: 100%;
+//   }
+// `;
 
-const CloseButton = styled(IconButton)`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #fff;
-`;
+// const CloseButton = styled(IconButton)`
+//   position: absolute;
+//   top: 10px;
+//   right: 10px;
+//   background-color: #fff;
+// `;
 
 export default Insights;

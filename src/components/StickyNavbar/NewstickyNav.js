@@ -139,8 +139,9 @@ function NewstickyNav(props) {
               xs={6}
               sx={{
                 display: { xs: "none", md: "flex" },
-                height: "40px",
+                height:"50%",
                 alignContent: "center",
+                padding:"30px 20px",
               }}
             >
               <img src="alphageek-frame.png" alt="logo" />
@@ -200,7 +201,7 @@ function NewstickyNav(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true,
+            keepMounted: false,
           }}
           sx={{
             display: { xs: "block", sm: "block",md:"none" },
