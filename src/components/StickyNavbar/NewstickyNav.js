@@ -202,7 +202,7 @@ function NewstickyNav(props) {
                 alignItems={"center"}
                 alignContent={"center"}
               >
-                <Typography variant="h1"  fontSize="24px" color={"black"}>
+                <Typography variant="h2"  fontWeight={"500"} color={"black"}>
                   C. Muson
                 </Typography>
               </Grid>
