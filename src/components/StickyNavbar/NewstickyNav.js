@@ -262,7 +262,7 @@ const StyledInputBase = muiStyled(InputBase)(({ theme }) => ({
     [theme.breakpoints.up("sm")]: {
       width: "38ch",
       "&:focus": {
-        width: "40ch",
+        width: "48ch",
       },
     },
     [theme.breakpoints.down("sm")]: {
