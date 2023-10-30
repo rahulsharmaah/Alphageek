@@ -172,7 +172,7 @@ function NewstickyNav(props) {
                     item
                     md={2}
                     xs={2}
-                    sx={{ ml: "10px", display: { xs: "none", md: "flex" } }}
+                    sx={{ ml: "40px", display: { xs: "none", md: "flex" } }}
                   >
                     <NotificationIconWrapper>
                       <NotificationIcon />
