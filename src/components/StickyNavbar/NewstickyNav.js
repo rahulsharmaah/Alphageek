@@ -187,8 +187,24 @@ function NewstickyNav(props) {
               xs={6}
               sx={{ display: { xs: "none", md: "flex" } }}
             >
-              <Grid item md={4}>
-                <img src="/xbox.jpg" alt="xbox.jpg" />
+              <Grid item md={4} display="flex" alignItems={"center"}>
+                <Grid item xs={12}>
+                  {" "}
+                  <ImageWrapper>
+                    <img src="/xbox.jpg" alt="xbox.jpg" />
+                  </ImageWrapper>
+                </Grid>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                display="flex"
+                alignItems={"center"}
+                alignContent={"center"}
+              >
+                <Typography variant="h1"  fontSize="24px" color={"black"}>
+                  C. Muson
+                </Typography>
               </Grid>
             </Grid>
           </Grid>
@@ -262,7 +278,7 @@ const StyledInputBase = muiStyled(InputBase)(({ theme }) => ({
     [theme.breakpoints.up("sm")]: {
       width: "38ch",
       "&:focus": {
-        width: "48ch",
+        width: "42ch",
       },
     },
     [theme.breakpoints.down("sm")]: {
@@ -273,4 +289,9 @@ const StyledInputBase = muiStyled(InputBase)(({ theme }) => ({
     },
   },
 }));
+
+const ImageWrapper = styled.div`
+  justify-content: flex-start;
+  align-items: center;
+`;
 export default NewstickyNav;
