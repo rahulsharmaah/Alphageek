@@ -149,7 +149,7 @@ function NewstickyNav(props) {
             <Grid item md={5} xs={6}>
               <Box>
                 <Grid container>
-                  <Grid item md={8} xs={10}>
+                  <Grid item md={8} xs={12}>
                     <Box
                       sx={{
                         display: "flex",
@@ -268,6 +268,7 @@ const SearchIconWrapper = muiStyled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   color: "black",
+  width: "5ch",
 }));
 const StyledInputBase = muiStyled(InputBase)(({ theme }) => ({
   color: "inherit",
@@ -286,7 +287,7 @@ const StyledInputBase = muiStyled(InputBase)(({ theme }) => ({
     [theme.breakpoints.down("sm")]: {
       width: "48ch",
       "&:focus": {
-        width: "40ch",
+        width: "52ch",
       },
     },
   },
