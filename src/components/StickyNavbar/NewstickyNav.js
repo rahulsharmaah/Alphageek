@@ -186,15 +186,17 @@ function NewstickyNav(props) {
               md={4}
               xs={6}
               sx={{ display: { xs: "none", md: "flex" } }}
+              display="flex"
+              alignItems={"center"}
             >
-              <Grid item md={4} display="flex" alignItems={"center"}>
+              <>
                 <Grid item xs={12}>
                   {" "}
                   <ImageWrapper>
                     <img src="/xbox.jpg" alt="xbox.jpg" />
                   </ImageWrapper>
                 </Grid>
-              </Grid>
+              </>
               <Grid
                 item
                 xs={12}
@@ -202,7 +204,7 @@ function NewstickyNav(props) {
                 alignItems={"center"}
                 alignContent={"center"}
               >
-                <Typography variant="h2"  fontWeight={"500"} color={"black"}>
+                <Typography variant="h2" fontWeight={"500"} color={"black"}>
                   C. Muson
                 </Typography>
               </Grid>
