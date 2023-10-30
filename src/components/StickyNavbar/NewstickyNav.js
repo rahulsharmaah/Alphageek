@@ -113,14 +113,14 @@ function NewstickyNav(props) {
     <Box
       sx={{
         display: "flex",
-        marginTop: "20px",
+        marginTop: "40px",
         marginBottom: { sm: "90px", xs: "90px" },
       }}
     >
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{ backgroundColor: "#ffff", height: "70px", padding: "0px 20px" }}
+        sx={{ backgroundColor: "#ffff", height: "110px", padding: "20px 0px" }}
       >
         <Toolbar>
           <IconButton
@@ -139,9 +139,9 @@ function NewstickyNav(props) {
               xs={6}
               sx={{
                 display: { xs: "none", md: "flex" },
-                height:"50%",
+                height: "50%",
                 alignContent: "center",
-                padding:"30px 20px",
+                padding: "20px 20px",
               }}
             >
               <img src="alphageek-frame.png" alt="logo" />
@@ -204,7 +204,7 @@ function NewstickyNav(props) {
             keepMounted: false,
           }}
           sx={{
-            display: { xs: "block", sm: "block",md:"none" },
+            display: { xs: "block", sm: "block", md: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
