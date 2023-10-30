@@ -172,7 +172,7 @@ function NewstickyNav(props) {
                     item
                     md={2}
                     xs={2}
-                    sx={{ ml: "40px", display: { xs: "none", md: "flex" } }}
+                    sx={{ ml: "40px", display: { xs: "none", md: "flex" },justifyContent: "flex-end"  }}
                   >
                     <NotificationIconWrapper>
                       <NotificationIcon />
@@ -280,7 +280,7 @@ const StyledInputBase = muiStyled(InputBase)(({ theme }) => ({
     [theme.breakpoints.up("sm")]: {
       width: "38ch",
       "&:focus": {
-        width: "40ch",
+        width: "42ch",
       },
     },
     [theme.breakpoints.down("sm")]: {
