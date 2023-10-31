@@ -130,7 +130,7 @@ const EngagementCard = ({
                 <Grid2 item md={11} xs={10}>
                   {" "}
                   <ProgressBar
-                    // variant="determinate"
+                    variant="determinate"
                     key={index}
                     isLast={index === progressBars.length - 1}
                     value={progress.percentage}
