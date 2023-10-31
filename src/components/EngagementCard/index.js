@@ -208,6 +208,12 @@ const ProgressBar = styled(LinearProgress)`
         ? "var(--Orange, #E58828) "
         : "linear-gradient(90deg, #27b1fe 0.46%, #1dc560 118.27%)"} !important;
   }
+  .MuiLinearProgress-determinate{
+    background: ${(props) =>
+      props.isLast
+        ? "var(--Orange, #E58828) "
+        : "linear-gradient(90deg, #27b1fe 0.46%, #1dc560 118.27%)"} !important;
+  }
   /* transform: scaleX(-1); */
 `;
 
