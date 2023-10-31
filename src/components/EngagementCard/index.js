@@ -33,7 +33,7 @@ const EngagementCard = ({
       <CardContent>
         {/* <------------------Heading section ----------------------------> */}
         <Grid2 container alignItems="center">
-          <Grid2 item md={3}  textAlign={"start"} px={1}>
+          <Grid2 item md={3} textAlign={"start"} px={1}>
             <Typography variant="h3">{title} </Typography>
           </Grid2>
           <Grid2 item md={5} margin={"2px auto"}>
@@ -107,10 +107,14 @@ const EngagementCard = ({
                   xs={9}
                   sx={{ display: "flex", justifyContent: "flex-start" }}
                 >
-                  <Typography variant="h4" color="#1C2753" sx={{display: "contents"}}>
+                  <Typography
+                    variant="h4"
+                    color="#1C2753"
+                    sx={{ display: "contents" }}
+                  >
                     <>{progressBarsHeading}</>
                     <>
-                      <Typography variant={"body2"} fontWeight={500} >
+                      <Typography variant={"body2"} fontWeight={500}>
                         {progress.progressBarsItalicText}
                       </Typography>
                     </>
@@ -126,7 +130,7 @@ const EngagementCard = ({
                 <Grid2 item md={11} xs={10}>
                   {" "}
                   <ProgressBar
-                    variant="determinate"
+                    // variant="determinate"
                     key={index}
                     isLast={index === progressBars.length - 1}
                     value={progress.percentage}
